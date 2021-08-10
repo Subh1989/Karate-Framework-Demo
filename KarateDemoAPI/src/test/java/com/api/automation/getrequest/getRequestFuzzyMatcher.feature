@@ -16,7 +16,12 @@ Feature: To test the GET end point of the application and perform Fuzzy matcher 
     And match response.[0].jobTitle == '#string'
     And match response.[0].project[0].technology == '#array'
     And match response.[0].experience == '#array'
-
+    #Complex Fuzzy matcher
+    And match response.[0].jobId == '#? _ ==1'
+    And match response.[0].jobId == '#? _ >=1'
+    And match response.[0].jobTitle == '#string? _.length>2'
+    # Make sure it is an array of string and each strings are greater than length 2
+    And match response.[0].experience == '#[3] #string? _.length>2'
 
   Scenario: To get all the data from the application in XML format and perform Fuzzy matcher validation
     Given path '/normal/webapi/all'
