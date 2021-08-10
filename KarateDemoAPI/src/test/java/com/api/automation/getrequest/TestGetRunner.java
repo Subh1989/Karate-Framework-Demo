@@ -12,6 +12,6 @@ public class TestGetRunner {
 	
 	@Test
 	public Karate runTestUsingClassPath() {
-		return Karate.run("classpath:com/api/automation/getrequest/ResponseValidationUsingExternalFile.feature");
+		return Karate.run("classpath:com/api/automation/getrequest/getRequestUsingQueryParam.feature");
 	}
 }

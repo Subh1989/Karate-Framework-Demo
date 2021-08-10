@@ -1,0 +1,28 @@
+{
+  "jobId": '#(jobID)',
+  "jobTitle": "Software Engg",
+  "jobDescription": "To develop andriod application and web application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron"
+  ],
+  "project": [
+    {
+      "projectName": "Movie App",
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle"
+      ]
+    },
+    {
+      "projectName": "Web App",
+      "technology": [
+        "Selenium",
+        "UFT",
+        "RPA"
+      ]
+    }
+  ]
+}
