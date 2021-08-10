@@ -1,2 +1,7 @@
-com\api\automation\getrequest\TestGetRunner.class
+com\api\automation\endtoend\e2eRunner.class
+com\api\automation\putRequest\putRunner.class
+com\api\automation\postRequest\postRunner.class
 com\api\automation\CommonCode.class
+com\api\automation\ParallelBuilder.class
+com\api\automation\ParallelRunner.class
+com\api\automation\getrequest\TestGetRunner.class
