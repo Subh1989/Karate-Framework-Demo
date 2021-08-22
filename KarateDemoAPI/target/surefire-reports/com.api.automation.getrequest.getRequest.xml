@@ -1,0 +1,7 @@
+<testsuite failures="0" name="com/api/automation/getrequest/getRequest.feature" skipped="0" tests="1" time="0.549648">
+  <testcase classname="com.api.automation.getrequest.getRequest" name="To get all the data from the application in JSON format" time="0.549648">
+    <system-out>Given url 'http://localhost:9897/normal/webapi/all' ....................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

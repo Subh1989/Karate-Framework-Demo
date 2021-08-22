@@ -1,0 +1,27 @@
+<testsuite failures="0" name="com/api/automation/getrequest/VariableCreation.feature" skipped="0" tests="2" time="0.092175">
+  <testcase classname="com.api.automation.getrequest.VariableCreation" name="To create a variable" time="0.060074">
+    <system-out>* def app_name = "Google" ................................................. passed
+* def firstNum = 10 ....................................................... passed
+Given def a = 10 .......................................................... passed
+And def b = "subhankar" ................................................... passed
+And def c = a+10 .......................................................... passed
+Then print "Print integer value :: ", a ................................... passed
+And print "String value :: ", b ........................................... passed
+And print "Sum is :: ", c ................................................. passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.VariableCreation" name="Access the value from background" time="0.032102">
+    <system-out>* def app_name = "Google" ................................................. passed
+* def firstNum = 10 ....................................................... passed
+Given def a = 10 .......................................................... passed
+And def b = "subhankar" ................................................... passed
+And def c = a+10 .......................................................... passed
+Then print "Print integer value :: ", a ................................... passed
+And print "String value :: ", b ........................................... passed
+And print "Sum is :: ", c ................................................. passed
+* def app_name = "Google" ................................................. passed
+* def firstNum = 10 ....................................................... passed
+And print "App name from background is :: ", app_name ..................... passed
+* def sum = firstNum+20 ................................................... passed
+And print "Final sum is", sum ............................................. passed</system-out>
+  </testcase>
+</testsuite>

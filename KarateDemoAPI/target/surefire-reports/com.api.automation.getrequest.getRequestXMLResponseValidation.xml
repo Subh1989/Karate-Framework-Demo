@@ -1,0 +1,26 @@
+<testsuite failures="1" name="com/api/automation/getrequest/getRequestXMLResponseValidation.feature" skipped="0" tests="1" time="0.068219">
+  <testcase classname="com.api.automation.getrequest.getRequestXMLResponseValidation" name="To get all the data from the application in XML format and perform xml response validation" time="0.068219">
+    <failure message="getRequestXMLResponseValidation.feature:13 - path: /List/item/jobTitle, actual: '[&quot;Software Engg&quot;,&quot;Software Engg - Part2&quot;,&quot;Software Engg - Part2&quot;,&quot;Software Engg - Part2&quot;,&quot;Software Engg - Part2&quot;]', expected: 'Software Engg', reason: not equal">Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/xml' ..................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response/List/item/jobTitle == 'Software Engg' .................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequestXMLResponseValidation.feature:13 - path: /List/item/jobTitle, actual: '["Software Engg","Software Engg - Part2","Software Engg - Part2","Software Engg - Part2","Software Engg - Part2"]', expected: 'Software Engg', reason: not equal&#13;
+	at ✽.And match response/List/item/jobTitle == 'Software Engg' (getRequestXMLResponseValidation.feature:13)&#13;
+
+And match response/List/item/jobDescription == 'To develop andriod application' . skipped
+And match response/List/item/experience/experience[1] == 'Google' ......... skipped
+And match response/List/item/experience/experience[2] == 'Apple' .......... skipped
+And match response/List/item/experience/experience[3] == 'Mobile Iron' .... skipped
+And match response//List/item/project/project/projectName == 'Movie App' .. skipped
+And match /List/item/project/project/technology/technology[1] == 'Kotlin' . skipped
+And match /List/item/project/project/technology/technology[2] == 'SQL Lite' . skipped
+And match /List/item/project/project/technology/technology[3] == 'Gradle' . skipped
+And match response.List.item.project.project.technology.technology[0] == 'Kotlin' . skipped</failure>
+  </testcase>
+</testsuite>

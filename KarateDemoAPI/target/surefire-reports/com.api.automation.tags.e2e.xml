@@ -1,0 +1,187 @@
+<testsuite failures="4" name="com/api/automation/tags/e2e.feature" skipped="0" tests="5" time="0.254276">
+  <testcase classname="com.api.automation.tags.e2e" name="Test the post end point to create a job entry" time="0.040872">
+    <failure message="e2e.feature:11 - could not find or read file: e2eData/e2eData.json">Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def payload = read("e2eData/e2eData.json") (e2e.feature:11)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+* def actualJobId = response.jobId ........................................ skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.tags.e2e" name="Test the get end point to validate the job entry" time="0.02584">
+    <system-out>Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def payload = read("e2eData/e2eData.json") (e2e.feature:11)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+* def actualJobId = response.jobId ........................................ skipped
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle contains 'Software Engg - Part2' .......... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.tags.e2e" name="Test the put end point to update the job entry" time="0.050659">
+    <failure message="e2e.feature:25 - &#10;e2e.feature:11 - could not find or read file: e2eData/e2eData.json">Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def payload = read("e2eData/e2eData.json") (e2e.feature:11)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+* def actualJobId = response.jobId ........................................ skipped
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle contains 'Software Engg - Part2' .......... passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:25 - 
+e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def postResp = call read("e2e.feature@tag1") (e2e.feature:25)&#13;
+
+* def jobID = postResp.actualJobId ........................................ skipped
+When path 'normal/webapi/update' .......................................... skipped
+* def payload = read("e2eData/e2eDataUpdate.json") ........................ skipped
+And request payload ....................................................... skipped
+When method put ........................................................... skipped
+Then status 200 ........................................................... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.tags.e2e" name="Test the delete end point to delete the job entry" time="0.05896">
+    <failure message="e2e.feature:34 - &#10;e2e.feature:11 - could not find or read file: e2eData/e2eData.json">Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def payload = read("e2eData/e2eData.json") (e2e.feature:11)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+* def actualJobId = response.jobId ........................................ skipped
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle contains 'Software Engg - Part2' .......... passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:25 - 
+e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def postResp = call read("e2e.feature@tag1") (e2e.feature:25)&#13;
+
+* def jobID = postResp.actualJobId ........................................ skipped
+When path 'normal/webapi/update' .......................................... skipped
+* def payload = read("e2eData/e2eDataUpdate.json") ........................ skipped
+And request payload ....................................................... skipped
+When method put ........................................................... skipped
+Then status 200 ........................................................... skipped
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:34 - 
+e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def postResp = call read("e2e.feature@tag1") (e2e.feature:34)&#13;
+
+* def jobID = postResp.actualJobId ........................................ skipped
+Given path 'normal/webapi/remove/'+jobID .................................. skipped
+When method delete ........................................................ skipped
+Then status 200 ........................................................... skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.tags.e2e" name="Test the get end point to validate the job entry not present" time="0.077944">
+    <failure message="e2e.feature:45 - path: $.[*].jobTitle[*], actual: [&quot;Software Engg&quot;,&quot;Software Engg - Part2&quot;], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected">Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def payload = read("e2eData/e2eData.json") (e2e.feature:11)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+* def actualJobId = response.jobId ........................................ skipped
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle contains 'Software Engg - Part2' .......... passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:25 - 
+e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def postResp = call read("e2e.feature@tag1") (e2e.feature:25)&#13;
+
+* def jobID = postResp.actualJobId ........................................ skipped
+When path 'normal/webapi/update' .......................................... skipped
+* def payload = read("e2eData/e2eDataUpdate.json") ........................ skipped
+And request payload ....................................................... skipped
+When method put ........................................................... skipped
+Then status 200 ........................................................... skipped
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:34 - 
+e2e.feature:11 - could not find or read file: e2eData/e2eData.json&#13;
+	at ✽.* def postResp = call read("e2e.feature@tag1") (e2e.feature:34)&#13;
+
+* def jobID = postResp.actualJobId ........................................ skipped
+Given path 'normal/webapi/remove/'+jobID .................................. skipped
+When method delete ........................................................ skipped
+Then status 200 ........................................................... skipped
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle !contains 'Software Engg - Part2' ......... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:45 - path: $.[*].jobTitle[*], actual: ["Software Engg","Software Engg - Part2"], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected&#13;
+	at ✽.And match response.[*].jobTitle !contains 'Software Engg - Part2' (e2e.feature:45)</failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,520 @@
+<testsuite failures="2" name="com/api/automation/tags/createJobEntry.feature" skipped="0" tests="9" time="0.742486">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry" time="0.069542">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg - Part2' .................... passed
+* def actualJobID = response.jobId ........................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Delete the job entry tagged with tag1" time="0.164925">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg - Part2' .................... passed
+* def actualJobID = response.jobId ........................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag1") ................. passed
+* def jobId = postResp.actualJobID ........................................ passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry with payload from external file" time="0.003301">
+    <failure message="createJobEntry.feature:31 - could not find or read file: data/jobEntry.json">Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg - Part2' .................... passed
+* def actualJobID = response.jobId ........................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag1") ................. passed
+* def jobId = postResp.actualJobID ........................................ passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def payload = read("data/jobEntry.json") (createJobEntry.feature:31)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And print response ........................................................ skipped
+And match response.jobTitle == 'Software Engg - Part2' .................... skipped
+* def actualJobID = response.jobId ........................................ skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Delete the job entry tagged with tag2" time="0.059271">
+    <failure message="createJobEntry.feature:41 - &#10;createJobEntry.feature:31 - could not find or read file: data/jobEntry.json">Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg - Part2' .................... passed
+* def actualJobID = response.jobId ........................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag1") ................. passed
+* def jobId = postResp.actualJobID ........................................ passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def payload = read("data/jobEntry.json") (createJobEntry.feature:31)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And print response ........................................................ skipped
+And match response.jobTitle == 'Software Engg - Part2' .................... skipped
+* def actualJobID = response.jobId ........................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag2") ................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:41 - 
+createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def postResp = call read("createJobEntry.feature@tag2") (createJobEntry.feature:41)&#13;
+
+* def jobId = postResp.actualJobID ........................................ skipped
+And path '/normal/webapi/remove/'+jobId ................................... skipped
+And method delete ......................................................... skipped
+And status 200 ............................................................ skipped</failure>
+  </testcase>
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.112947">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg - Part2' .................... passed
+* def actualJobID = response.jobId ........................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag1") ................. passed
+* def jobId = postResp.actualJobID ........................................ passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def payload = read("data/jobEntry.json") (createJobEntry.feature:31)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And print response ........................................................ skipped
+And match response.jobTitle == 'Software Engg - Part2' .................... skipped
+* def actualJobID = response.jobId ........................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag2") ................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:41 - 
+createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def postResp = call read("createJobEntry.feature@tag2") (createJobEntry.feature:41)&#13;
+
+* def jobId = postResp.actualJobID ........................................ skipped
+And path '/normal/webapi/remove/'+jobId ................................... skipped
+And method delete ......................................................... skipped
+And status 200 ............................................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 2, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part2" .................... passed
+* def actualJobID = 2 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.09353">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg - Part2' .................... passed
+* def actualJobID = response.jobId ........................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag1") ................. passed
+* def jobId = postResp.actualJobID ........................................ passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def payload = read("data/jobEntry.json") (createJobEntry.feature:31)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And print response ........................................................ skipped
+And match response.jobTitle == 'Software Engg - Part2' .................... skipped
+* def actualJobID = response.jobId ........................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag2") ................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:41 - 
+createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def postResp = call read("createJobEntry.feature@tag2") (createJobEntry.feature:41)&#13;
+
+* def jobId = postResp.actualJobID ........................................ skipped
+And path '/normal/webapi/remove/'+jobId ................................... skipped
+And method delete ......................................................... skipped
+And status 200 ............................................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 2, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part2" .................... passed
+* def actualJobID = 2 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 3, 		"jobTitle": "Software Engg - Part3", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part3" .................... passed
+* def actualJobID = 3 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.083131">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg - Part2' .................... passed
+* def actualJobID = response.jobId ........................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag1") ................. passed
+* def jobId = postResp.actualJobID ........................................ passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def payload = read("data/jobEntry.json") (createJobEntry.feature:31)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And print response ........................................................ skipped
+And match response.jobTitle == 'Software Engg - Part2' .................... skipped
+* def actualJobID = response.jobId ........................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag2") ................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:41 - 
+createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def postResp = call read("createJobEntry.feature@tag2") (createJobEntry.feature:41)&#13;
+
+* def jobId = postResp.actualJobID ........................................ skipped
+And path '/normal/webapi/remove/'+jobId ................................... skipped
+And method delete ......................................................... skipped
+And status 200 ............................................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 2, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part2" .................... passed
+* def actualJobID = 2 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 3, 		"jobTitle": "Software Engg - Part3", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part3" .................... passed
+* def actualJobID = 3 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 4, 		"jobTitle": "Software Engg - Part4", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part4" .................... passed
+* def actualJobID = 4 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.090556">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg - Part2' .................... passed
+* def actualJobID = response.jobId ........................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag1") ................. passed
+* def jobId = postResp.actualJobID ........................................ passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def payload = read("data/jobEntry.json") (createJobEntry.feature:31)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And print response ........................................................ skipped
+And match response.jobTitle == 'Software Engg - Part2' .................... skipped
+* def actualJobID = response.jobId ........................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag2") ................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:41 - 
+createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def postResp = call read("createJobEntry.feature@tag2") (createJobEntry.feature:41)&#13;
+
+* def jobId = postResp.actualJobID ........................................ skipped
+And path '/normal/webapi/remove/'+jobId ................................... skipped
+And method delete ......................................................... skipped
+And status 200 ............................................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 2, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part2" .................... passed
+* def actualJobID = 2 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 3, 		"jobTitle": "Software Engg - Part3", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part3" .................... passed
+* def actualJobID = 3 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 4, 		"jobTitle": "Software Engg - Part4", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part4" .................... passed
+* def actualJobID = 4 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part5", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part5" .................... passed
+* def actualJobID = 5 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.065282">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == 'Software Engg - Part2' .................... passed
+* def actualJobID = response.jobId ........................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag1") ................. passed
+* def jobId = postResp.actualJobID ........................................ passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def payload = read("data/jobEntry.json") (createJobEntry.feature:31)&#13;
+
+And request payload ....................................................... skipped
+When method post .......................................................... skipped
+Then status 201 ........................................................... skipped
+And print response ........................................................ skipped
+And match response.jobTitle == 'Software Engg - Part2' .................... skipped
+* def actualJobID = response.jobId ........................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResp = call read("createJobEntry.feature@tag2") ................. failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: createJobEntry.feature:41 - 
+createJobEntry.feature:31 - could not find or read file: data/jobEntry.json&#13;
+	at ✽.* def postResp = call read("createJobEntry.feature@tag2") (createJobEntry.feature:41)&#13;
+
+* def jobId = postResp.actualJobID ........................................ skipped
+And path '/normal/webapi/remove/'+jobId ................................... skipped
+And method delete ......................................................... skipped
+And status 200 ............................................................ skipped
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 2, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part2" .................... passed
+* def actualJobID = 2 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 3, 		"jobTitle": "Software Engg - Part3", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part3" .................... passed
+* def actualJobID = 3 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 4, 		"jobTitle": "Software Engg - Part4", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part4" .................... passed
+* def actualJobID = 4 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part5", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part5" .................... passed
+* def actualJobID = 5 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 6, 		"jobTitle": "Software Engg - Part6", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response.jobTitle == "Software Engg - Part6" .................... passed
+* def actualJobID = 6 ..................................................... passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+</testsuite>

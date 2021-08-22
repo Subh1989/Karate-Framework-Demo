@@ -1,24 +1,21 @@
-18:03:35.950 karate.env system property was:  
-18:03:36.246 [print]  url ::  http://localhost:9897
-18:03:36.262 [print]  path ::  /normal/webapi/add
-18:03:36.280 [print]  id ::  86
-18:03:37.448 request:
+08:51:59.414 karate.env system property was:  
+08:52:00.063 request:
 1 > POST http://localhost:9897/normal/webapi/add
 1 > Accept: application/json
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Content-Length: 247
+1 > Content-Length: 246
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: localhost:9897
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
-{"jobId":86,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
+{"jobId":5,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
 
-18:03:37.552 response time in milliseconds: 97.43
+08:52:00.154 response time in milliseconds: 89.68
 1 < 201
 1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Tue, 10 Aug 2021 12:33:37 GMT
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
 1 < Expires: 0
 1 < Keep-Alive: timeout=60
 1 < Pragma: no-cache
@@ -26,10 +23,83 @@
 1 < X-Content-Type-Options: nosniff
 1 < X-Frame-Options: DENY
 1 < X-XSS-Protection: 1; mode=block
-{"jobId":86,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+{"jobId":5,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
 
-18:03:37.586 request:
-1 > GET http://localhost:9897/normal/webapi/find?id=86&jobTitle=Software+Engg+-+Part2
+08:52:00.156 [print] {
+  "jobId": 5,
+  "jobTitle": "Software Engg - Part2",
+  "project": [
+    {
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle",
+        "No Sql"
+      ],
+      "projectName": "Movie App"
+    }
+  ],
+  "jobDescription": "To develop andriod application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron",
+    "Facebook"
+  ]
+}
+
+08:52:00.200 karate.env system property was:  
+08:52:00.252 request:
+1 > POST http://localhost:9897/normal/webapi/add
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 246
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:9897
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+{"jobId":5,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
+
+08:52:00.266 response time in milliseconds: 13.47
+1 < 201
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
+1 < Expires: 0
+1 < Keep-Alive: timeout=60
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"jobId":5,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+
+08:52:00.267 [print] {
+  "jobId": 5,
+  "jobTitle": "Software Engg - Part2",
+  "project": [
+    {
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle",
+        "No Sql"
+      ],
+      "projectName": "Movie App"
+    }
+  ],
+  "jobDescription": "To develop andriod application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron",
+    "Facebook"
+  ]
+}
+
+08:52:00.284 request:
+1 > DELETE http://localhost:9897/normal/webapi/remove/5
 1 > Accept: application/json
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -37,12 +107,12 @@
 1 > Host: localhost:9897
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-18:03:39.846 response time in milliseconds: 2258.14
+08:52:00.312 response time in milliseconds: 28.83
 1 < 200
 1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Tue, 10 Aug 2021 12:33:39 GMT
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
 1 < Expires: 0
 1 < Keep-Alive: timeout=60
 1 < Pragma: no-cache
@@ -50,51 +120,26 @@
 1 < X-Content-Type-Options: nosniff
 1 < X-Frame-Options: DENY
 1 < X-XSS-Protection: 1; mode=block
-{"jobId":86,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+{"jobId":5,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
 
-18:03:39.859 request:
-2 > DELETE http://localhost:9897/normal/webapi/remove/86
-2 > Accept-Encoding: gzip,deflate
-2 > Connection: Keep-Alive
-2 > Host: localhost:9897
-2 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
-
-18:03:39.902 response time in milliseconds: 41.85
-2 < 200
-2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-2 < Connection: keep-alive
-2 < Content-Type: application/json
-2 < Date: Tue, 10 Aug 2021 12:33:39 GMT
-2 < Expires: 0
-2 < Keep-Alive: timeout=60
-2 < Pragma: no-cache
-2 < Transfer-Encoding: chunked
-2 < X-Content-Type-Options: nosniff
-2 < X-Frame-Options: DENY
-2 < X-XSS-Protection: 1; mode=block
-{"jobId":86,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
-
-18:03:39.932 karate.env system property was:  
-18:03:39.969 [print]  url ::  http://localhost:9897
-18:03:39.970 [print]  path ::  /normal/webapi/add
-18:03:39.971 [print]  id ::  76
-18:03:39.978 request:
+08:52:00.321 karate.env system property was:  
+08:52:00.328 request:
 1 > POST http://localhost:9897/normal/webapi/add
 1 > Accept: application/json
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Content-Length: 247
+1 > Content-Length: 246
 1 > Content-Type: application/json; charset=UTF-8
 1 > Host: localhost:9897
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
-{"jobId":76,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
+{"jobId":5,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
 
-18:03:39.986 response time in milliseconds: 6.02
+08:52:00.333 response time in milliseconds: 4.16
 1 < 201
 1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Tue, 10 Aug 2021 12:33:39 GMT
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
 1 < Expires: 0
 1 < Keep-Alive: timeout=60
 1 < Pragma: no-cache
@@ -102,10 +147,83 @@
 1 < X-Content-Type-Options: nosniff
 1 < X-Frame-Options: DENY
 1 < X-XSS-Protection: 1; mode=block
-{"jobId":76,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+{"jobId":5,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
 
-18:03:39.992 request:
-1 > GET http://localhost:9897/normal/webapi/find?id=55555&jobTitle=Software+Engg+-+Part2
+08:52:00.334 [print] {
+  "jobId": 5,
+  "jobTitle": "Software Engg - Part2",
+  "project": [
+    {
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle",
+        "No Sql"
+      ],
+      "projectName": "Movie App"
+    }
+  ],
+  "jobDescription": "To develop andriod application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron",
+    "Facebook"
+  ]
+}
+
+08:52:00.346 karate.env system property was:  
+08:52:00.384 request:
+1 > POST http://localhost:9897/normal/webapi/add
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 246
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:9897
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+{"jobId":5,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
+
+08:52:00.389 response time in milliseconds: 4.03
+1 < 201
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
+1 < Expires: 0
+1 < Keep-Alive: timeout=60
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"jobId":5,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+
+08:52:00.390 [print] {
+  "jobId": 5,
+  "jobTitle": "Software Engg - Part2",
+  "project": [
+    {
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle",
+        "No Sql"
+      ],
+      "projectName": "Movie App"
+    }
+  ],
+  "jobDescription": "To develop andriod application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron",
+    "Facebook"
+  ]
+}
+
+08:52:00.393 request:
+1 > DELETE http://localhost:9897/normal/webapi/remove/5
 1 > Accept: application/json
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -113,12 +231,12 @@
 1 > Host: localhost:9897
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-18:03:40.002 response time in milliseconds: 8.30
-1 < 404
+08:52:00.398 response time in milliseconds: 4.33
+1 < 200
 1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Tue, 10 Aug 2021 12:33:39 GMT
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
 1 < Expires: 0
 1 < Keep-Alive: timeout=60
 1 < Pragma: no-cache
@@ -126,38 +244,26 @@
 1 < X-Content-Type-Options: nosniff
 1 < X-Frame-Options: DENY
 1 < X-XSS-Protection: 1; mode=block
-{"message":"Failed to find job with id=55555, jobTitle=Software Engg - Part2"}
+{"jobId":5,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
 
-18:03:40.008 request:
-2 > DELETE http://localhost:9897/normal/webapi/remove/76
-2 > Accept-Encoding: gzip,deflate
-2 > Connection: Keep-Alive
-2 > Host: localhost:9897
-2 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+08:52:00.405 karate.env system property was:  
+08:52:00.408 request:
+1 > POST http://localhost:9897/normal/webapi/add
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 246
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:9897
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
 
-18:03:40.018 response time in milliseconds: 8.91
-2 < 200
-2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-2 < Connection: keep-alive
-2 < Content-Type: application/json
-2 < Date: Tue, 10 Aug 2021 12:33:39 GMT
-2 < Expires: 0
-2 < Keep-Alive: timeout=60
-2 < Pragma: no-cache
-2 < Transfer-Encoding: chunked
-2 < X-Content-Type-Options: nosniff
-2 < X-Frame-Options: DENY
-2 < X-XSS-Protection: 1; mode=block
-{"jobId":76,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
-
-p"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
-
-18:02:36.150 response time in milliseconds: 9.91
+08:52:00.449 response time in milliseconds: 40.87
 1 < 201
 1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Tue, 10 Aug 2021 12:32:35 GMT
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
 1 < Expires: 0
 1 < Keep-Alive: timeout=60
 1 < Pragma: no-cache
@@ -167,21 +273,69 @@ p"}],"jobDescription":"To develop andriod application","experience":["Google","A
 1 < X-XSS-Protection: 1; mode=block
 {"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
 
-18:02:36.166 request:
-1 > DELETE http://localhost:9897/normal/webapi/remove/2
+08:52:00.450 [print] {
+  "jobId": 2,
+  "jobTitle": "Software Engg - Part2",
+  "project": [
+    {
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle",
+        "No Sql"
+      ],
+      "projectName": "Movie App"
+    }
+  ],
+  "jobDescription": "To develop andriod application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron",
+    "Facebook"
+  ]
+}
+
+08:52:00.460 request:
+2 > DELETE http://localhost:9897/normal/webapi/remove/2
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: localhost:9897
+2 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+08:52:00.464 response time in milliseconds: 3.62
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Wed, 11 Aug 2021 03:22:00 GMT
+2 < Expires: 0
+2 < Keep-Alive: timeout=60
+2 < Pragma: no-cache
+2 < Transfer-Encoding: chunked
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+
+08:52:00.472 karate.env system property was:  
+08:52:00.475 request:
+1 > POST http://localhost:9897/normal/webapi/add
 1 > Accept: application/json
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Content-Type: application/json
+1 > Content-Length: 246
+1 > Content-Type: application/json; charset=UTF-8
 1 > Host: localhost:9897
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+{"jobId":3,"jobTitle":"Software Engg - Part3","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
 
-18:02:36.178 response time in milliseconds: 9.13
-1 < 200
+08:52:00.569 response time in milliseconds: 92.63
+1 < 201
 1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Tue, 10 Aug 2021 12:32:35 GMT
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
 1 < Expires: 0
 1 < Keep-Alive: timeout=60
 1 < Pragma: no-cache
@@ -189,24 +343,71 @@ p"}],"jobDescription":"To develop andriod application","experience":["Google","A
 1 < X-Content-Type-Options: nosniff
 1 < X-Frame-Options: DENY
 1 < X-XSS-Protection: 1; mode=block
-{"jobId":2,"jobTitle":"Software Engg","jobDescription":"To develop andriod application and web application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]},{"projectName":"Web App","technology":["Selenium","UFT","RPA"]}]}
+{"jobId":3,"jobTitle":"Software Engg - Part3","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
 
-18:02:36.196 karate.env system property was:  
-18:02:36.200 request:
-1 > GET http://localhost:9897/normal/webapi/all
+08:52:00.570 [print] {
+  "jobId": 3,
+  "jobTitle": "Software Engg - Part3",
+  "project": [
+    {
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle",
+        "No Sql"
+      ],
+      "projectName": "Movie App"
+    }
+  ],
+  "jobDescription": "To develop andriod application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron",
+    "Facebook"
+  ]
+}
+
+08:52:00.578 request:
+2 > DELETE http://localhost:9897/normal/webapi/remove/3
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: localhost:9897
+2 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+08:52:00.586 response time in milliseconds: 7.80
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Wed, 11 Aug 2021 03:22:00 GMT
+2 < Expires: 0
+2 < Keep-Alive: timeout=60
+2 < Pragma: no-cache
+2 < Transfer-Encoding: chunked
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+{"jobId":3,"jobTitle":"Software Engg - Part3","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+
+08:52:00.597 karate.env system property was:  
+08:52:00.599 request:
+1 > POST http://localhost:9897/normal/webapi/add
 1 > Accept: application/json
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Content-Type: application/json
+1 > Content-Length: 246
+1 > Content-Type: application/json; charset=UTF-8
 1 > Host: localhost:9897
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+{"jobId":4,"jobTitle":"Software Engg - Part4","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
 
-18:02:36.235 response time in milliseconds: 33.40
-1 < 200
+08:52:00.641 response time in milliseconds: 40.86
+1 < 201
 1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Tue, 10 Aug 2021 12:32:35 GMT
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
 1 < Expires: 0
 1 < Keep-Alive: timeout=60
 1 < Pragma: no-cache
@@ -214,28 +415,194 @@ p"}],"jobDescription":"To develop andriod application","experience":["Google","A
 1 < X-Content-Type-Options: nosniff
 1 < X-Frame-Options: DENY
 1 < X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]}]
+{"jobId":4,"jobTitle":"Software Engg - Part4","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
 
-18:02:36.236 [print] [
-  {
-    "jobId": 1,
-    "jobTitle": "Software Engg",
-    "project": [
-      {
-        "technology": [
-          "Kotlin",
-          "SQL Lite",
-          "Gradle"
-        ],
-        "projectName": "Movie App"
-      }
-    ],
-    "jobDescription": "To develop andriod application",
-    "experience": [
-      "Google",
-      "Apple",
-      "Mobile Iron"
-    ]
-  }
-]
+08:52:00.642 [print] {
+  "jobId": 4,
+  "jobTitle": "Software Engg - Part4",
+  "project": [
+    {
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle",
+        "No Sql"
+      ],
+      "projectName": "Movie App"
+    }
+  ],
+  "jobDescription": "To develop andriod application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron",
+    "Facebook"
+  ]
+}
+
+08:52:00.650 request:
+2 > DELETE http://localhost:9897/normal/webapi/remove/4
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: localhost:9897
+2 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+08:52:00.653 response time in milliseconds: 2.64
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Wed, 11 Aug 2021 03:22:00 GMT
+2 < Expires: 0
+2 < Keep-Alive: timeout=60
+2 < Pragma: no-cache
+2 < Transfer-Encoding: chunked
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+{"jobId":4,"jobTitle":"Software Engg - Part4","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+
+08:52:00.659 karate.env system property was:  
+08:52:00.661 request:
+1 > POST http://localhost:9897/normal/webapi/add
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 246
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:9897
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+{"jobId":5,"jobTitle":"Software Engg - Part5","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
+
+08:52:00.678 response time in milliseconds: 16.31
+1 < 201
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
+1 < Expires: 0
+1 < Keep-Alive: timeout=60
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"jobId":5,"jobTitle":"Software Engg - Part5","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+
+08:52:00.679 [print] {
+  "jobId": 5,
+  "jobTitle": "Software Engg - Part5",
+  "project": [
+    {
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle",
+        "No Sql"
+      ],
+      "projectName": "Movie App"
+    }
+  ],
+  "jobDescription": "To develop andriod application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron",
+    "Facebook"
+  ]
+}
+
+08:52:00.686 request:
+2 > DELETE http://localhost:9897/normal/webapi/remove/5
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: localhost:9897
+2 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+08:52:00.697 response time in milliseconds: 10.56
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Wed, 11 Aug 2021 03:22:00 GMT
+2 < Expires: 0
+2 < Keep-Alive: timeout=60
+2 < Pragma: no-cache
+2 < Transfer-Encoding: chunked
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+{"jobId":5,"jobTitle":"Software Engg - Part5","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+
+08:52:00.705 karate.env system property was:  
+08:52:00.708 request:
+1 > POST http://localhost:9897/normal/webapi/add
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 246
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: localhost:9897
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+{"jobId":6,"jobTitle":"Software Engg - Part6","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
+
+08:52:00.713 response time in milliseconds: 4.23
+1 < 201
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Wed, 11 Aug 2021 03:22:00 GMT
+1 < Expires: 0
+1 < Keep-Alive: timeout=60
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+{"jobId":6,"jobTitle":"Software Engg - Part6","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
+
+08:52:00.714 [print] {
+  "jobId": 6,
+  "jobTitle": "Software Engg - Part6",
+  "project": [
+    {
+      "technology": [
+        "Kotlin",
+        "SQL Lite",
+        "Gradle",
+        "No Sql"
+      ],
+      "projectName": "Movie App"
+    }
+  ],
+  "jobDescription": "To develop andriod application",
+  "experience": [
+    "Google",
+    "Apple",
+    "Mobile Iron",
+    "Facebook"
+  ]
+}
+
+08:52:00.723 request:
+2 > DELETE http://localhost:9897/normal/webapi/remove/6
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Host: localhost:9897
+2 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+08:52:00.729 response time in milliseconds: 5.69
+2 < 200
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Wed, 11 Aug 2021 03:22:00 GMT
+2 < Expires: 0
+2 < Keep-Alive: timeout=60
+2 < Pragma: no-cache
+2 < Transfer-Encoding: chunked
+2 < X-Content-Type-Options: nosniff
+2 < X-Frame-Options: DENY
+2 < X-XSS-Protection: 1; mode=block
+{"jobId":6,"jobTitle":"Software Engg - Part6","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}
 

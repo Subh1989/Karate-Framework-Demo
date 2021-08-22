@@ -1,0 +1,46 @@
+<testsuite failures="2" name="com/api/automation/getrequest/ResponseValidationUsingExternalFile.feature" skipped="0" tests="2" time="0.189467">
+  <testcase classname="com.api.automation.getrequest.ResponseValidationUsingExternalFile" name="To get all the data from the application in JSON format and validate the response from an external file" time="0.092145">
+    <failure message="ResponseValidationUsingExternalFile.feature:14 - path: $, actual: [{&quot;jobId&quot;:1,&quot;jobTitle&quot;:&quot;Software Engg&quot;,&quot;project&quot;:[{&quot;technology&quot;:[&quot;Kotlin&quot;,&quot;SQL Lite&quot;,&quot;Gradle&quot;],&quot;projectName&quot;:&quot;Movie App&quot;}],&quot;jobDescription&quot;:&quot;To develop andriod application&quot;,&quot;experience&quot;:[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;]},{&quot;jobId&quot;:800,&quot;jobTitle&quot;:&quot;Software Engg - Part2&quot;,&quot;project&quot;:[{&quot;technology&quot;:[&quot;Kotlin&quot;,&quot;SQL Lite&quot;,&quot;Gradle&quot;,&quot;No Sql&quot;],&quot;projectName&quot;:&quot;Movie App&quot;}],&quot;jobDescription&quot;:&quot;To develop andriod application&quot;,&quot;experience&quot;:[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;,&quot;Facebook&quot;]}], expected: [{&quot;jobId&quot;:1,&quot;jobTitle&quot;:&quot;Software Engg&quot;,&quot;project&quot;:[{&quot;technology&quot;:[&quot;Kotlin&quot;,&quot;SQL Lite&quot;,&quot;Gradle&quot;],&quot;projectName&quot;:&quot;Movie App&quot;}],&quot;jobDescription&quot;:&quot;To develop andriod application&quot;,&quot;experience&quot;:[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;]}], reason: actual and expected arrays are not the same size - 2:1">Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def expectedResponse = read("../JsonResponse.json") ..................... passed
+And print "Expected Response is :: ", expectedResponse .................... passed
+And match response == expectedResponse .................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: ResponseValidationUsingExternalFile.feature:14 - path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 2:1&#13;
+	at ✽.And match response == expectedResponse (ResponseValidationUsingExternalFile.feature:14)</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.ResponseValidationUsingExternalFile" name="To get all the data from the application in XML format and validate the response from an external file" time="0.097323">
+    <failure message="ResponseValidationUsingExternalFile.feature:23 - path: /List/item, actual: [{jobId=1, jobTitle=Software Engg, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle]}}}}, {jobId=800, jobTitle=Software Engg - Part2, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron, Facebook]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle, No Sql]}}}}], expected: '&lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt;', reason: actual value is not map-like">Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def expectedResponse = read("../JsonResponse.json") ..................... passed
+And print "Expected Response is :: ", expectedResponse .................... passed
+And match response == expectedResponse .................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: ResponseValidationUsingExternalFile.feature:14 - path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 2:1&#13;
+	at ✽.And match response == expectedResponse (ResponseValidationUsingExternalFile.feature:14)&#13;
+
+Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/xml' ..................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+* def expectedXml = read("../XMLResponse.xml") ............................ passed
+And print "Expected XML is :: ", expectedXml .............................. passed
+And match response == expectedXml ......................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: ResponseValidationUsingExternalFile.feature:23 - path: /List/item, actual: [{jobId=1, jobTitle=Software Engg, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle]}}}}, {jobId=800, jobTitle=Software Engg - Part2, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron, Facebook]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle, No Sql]}}}}], expected: '&lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt;', reason: actual value is not map-like&#13;
+	at ✽.And match response == expectedXml (ResponseValidationUsingExternalFile.feature:23)</failure>
+  </testcase>
+</testsuite>

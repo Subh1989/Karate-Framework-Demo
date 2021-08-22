@@ -1,0 +1,11 @@
+<testsuite failures="0" name="com/api/automation/CreateJobEntryReusable.feature" skipped="0" tests="1" time="0.568299">
+  <testcase classname="com.api.automation.CreateJobEntryReusable" name="1" time="0.568299">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+And request { 		"jobId": 800, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* def responseJobId = response.jobId ...................................... passed</system-out>
+  </testcase>
+</testsuite>

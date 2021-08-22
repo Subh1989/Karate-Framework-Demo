@@ -1,0 +1,44 @@
+<testsuite failures="0" name="com/api/automation/getrequest/getRequestUsingQueryParam.feature" skipped="0" tests="2" time="0.615448">
+  <testcase classname="com.api.automation.getrequest.getRequestUsingQueryParam" name="To get the data from the application in JSON format using query parameter" time="0.313506">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def jid = jobId() ....................................................... passed
+* def postRequest = call read("../CreateJobEntryReusableWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(jid)'} . passed
+Given path '/normal/webapi/find' .......................................... passed
+And params {id:'#(jid)', jobTitle:'Software Engg - Part2'} ................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobId == jid ........................................... passed
+And path '/normal/webapi/remove/'+jid ..................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.getRequestUsingQueryParam" name="Test the get end point using query parameter to validate the data is not present in the application" time="0.301941">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def jid = jobId() ....................................................... passed
+* def postRequest = call read("../CreateJobEntryReusableWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(jid)'} . passed
+Given path '/normal/webapi/find' .......................................... passed
+And params {id:'#(jid)', jobTitle:'Software Engg - Part2'} ................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobId == jid ........................................... passed
+And path '/normal/webapi/remove/'+jid ..................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url 'http://localhost:9897' ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def jid = jobId() ....................................................... passed
+* def postRequest = call read("../CreateJobEntryReusableWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(jid)'} . passed
+Given path '/normal/webapi/find' .......................................... passed
+And params {id:55555, jobTitle:'Software Engg - Part2'} ................... passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+And path '/normal/webapi/remove/'+jid ..................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+</testsuite>

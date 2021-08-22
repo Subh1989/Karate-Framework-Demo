@@ -1,3 +1,4 @@
+@Regression
 Feature: To test the post endpoint and create a job entry
 
   Background: Initialize the common details

@@ -1,0 +1,56 @@
+<testsuite failures="1" name="com/api/automation/getrequest/getRequestFuzzyMatcher.feature" skipped="0" tests="2" time="1.262799">
+  <testcase classname="com.api.automation.getrequest.getRequestFuzzyMatcher" name="To get all the data from the application in JSON format and perform Fuzzy matcher validation" time="0.648654">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[0].jobId == '#present' ................................ passed
+And match response.[0].jobId == '#number' ................................. passed
+And match response.[0].jobTitle == '#notnull' ............................. passed
+And match response.[0].jobTitle == '#string' .............................. passed
+And match response.[0].project[0].technology == '#array' .................. passed
+And match response.[0].experience == '#array' ............................. passed
+And match response.[0].jobId == '#? _ ==1' ................................ passed
+And match response.[0].jobId == '#? _ &gt;=1' ................................ passed
+And match response.[0].jobTitle == '#string? _.length&gt;2' .................. passed
+And match response.[0].experience == '#[3] #string? _.length&gt;2' ........... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.getRequestFuzzyMatcher" name="To get all the data from the application in XML format and perform Fuzzy matcher validation" time="0.614145">
+    <failure message="getRequestFuzzyMatcher.feature:34 - path: /List/item/experience/experience, actual: '[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;,&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;,&quot;Facebook&quot;]', expected: '#array', reason: not an array or list">Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[0].jobId == '#present' ................................ passed
+And match response.[0].jobId == '#number' ................................. passed
+And match response.[0].jobTitle == '#notnull' ............................. passed
+And match response.[0].jobTitle == '#string' .............................. passed
+And match response.[0].project[0].technology == '#array' .................. passed
+And match response.[0].experience == '#array' ............................. passed
+And match response.[0].jobId == '#? _ ==1' ................................ passed
+And match response.[0].jobId == '#? _ &gt;=1' ................................ passed
+And match response.[0].jobTitle == '#string? _.length&gt;2' .................. passed
+And match response.[0].experience == '#[3] #string? _.length&gt;2' ........... passed
+Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/xml' ..................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response/List/item/jobTitle == '#string' ........................ passed
+And match response/List/item/jobDescription == '#notnull' ................. passed
+And match response/List/item/experience/experience == '#array' ............ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequestFuzzyMatcher.feature:34 - path: /List/item/experience/experience, actual: '["Google","Apple","Mobile Iron","Google","Apple","Mobile Iron","Facebook"]', expected: '#array', reason: not an array or list&#13;
+	at ✽.And match response/List/item/experience/experience == '#array' (getRequestFuzzyMatcher.feature:34)&#13;
+
+And match response//List/item/project/project/projectName == '#string' .... skipped</failure>
+  </testcase>
+</testsuite>
