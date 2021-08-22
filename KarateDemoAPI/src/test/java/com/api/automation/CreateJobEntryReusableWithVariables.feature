@@ -12,3 +12,4 @@ Feature: To test the post end point in creating a job entry for reusable scenari
       When method post
       Then status 201
       * def responseJobId = response.jobId
+      * def responseJobTitle = response.jobTitle
