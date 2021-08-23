@@ -1,0 +1,4 @@
+09:28:37.662 karate.env system property was:  
+09:28:37.682 feature call failed: classpath:com/api/automation/tags/e2e.feature
+arg: null
+e2e.feature:11 - could not find or read file: e2eData/e2eData.json

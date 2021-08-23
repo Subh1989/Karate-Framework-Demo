@@ -1,0 +1,46 @@
+09:30:46.301 karate.env system property was:  
+09:30:46.303 [print] =================Background step should execute first==================
+09:30:46.303 request:
+1 > GET http://localhost:9897/normal/webapi/all
+1 > Accept: application/json
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: localhost:9897
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
+
+09:30:46.303 response time in milliseconds: 4.25
+1 < 200
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Wed, 11 Aug 2021 04:00:45 GMT
+1 < Expires: 0
+1 < Keep-Alive: timeout=60
+1 < Pragma: no-cache
+1 < Transfer-Encoding: chunked
+1 < X-Content-Type-Options: nosniff
+1 < X-Frame-Options: DENY
+1 < X-XSS-Protection: 1; mode=block
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]}]
+
+ "Software Engg",
+    "project": [
+      {
+        "technology": [
+          "Kotlin",
+          "SQL Lite",
+          "Gradle"
+        ],
+        "projectName": "Movie App"
+      }
+    ],
+    "jobDescription": "To develop andriod application",
+    "experience": [
+      "Google",
+      "Apple",
+      "Mobile Iron"
+    ]
+  }
+]
+
+09:28:37.652 assertion failed: path: $.[*].jobTitle[*], actual: ["Software Engg"], expected: 'Software Engg - Part2', reason: actual value does not contain expected

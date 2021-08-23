@@ -1,0 +1,27 @@
+<testsuite failures="0" name="com/api/automation/requestChaining/requestChaining.feature" skipped="0" tests="1" time="0.685717">
+  <testcase classname="com.api.automation.requestChaining.requestChaining" name="Perform request chaining" time="0.685717">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def jid = jobId() ....................................................... passed
+* def postResponse = call read("../CreateJobEntryReusableWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(jid)'} . passed
+* def jobId = postResponse.responseJobId .................................. passed
+* def jobTitle = postResponse.responseJobTitle ............................ passed
+Given path '/normal/webapi/update/details' ................................ passed
+* def jobDes = 'To develop andriod application and web application' ....... passed
+And params {id:'#(jobId)', jobTitle:'#(jobTitle)', jobDescription:'#(jobDes)'} . passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+* def patchJobId = response.jobId ......................................... passed
+* def patchJobTitle = response.jobTitle ................................... passed
+Given path '/normal/webapi/find' .......................................... passed
+And params {id:'#(patchJobId)', jobTitle:'#(patchJobTitle)'} .............. passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobDescription == jobDes ............................... passed
+Given path '/normal/webapi/remove/'+patchJobId ............................ passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,22 @@
+<testsuite failures="0" name="com/api/automation/getrequest/getRequestWithPathVariable.feature" skipped="0" tests="2" time="3.559037">
+  <testcase classname="com.api.automation.getrequest.getRequestWithPathVariable" name="To get all the data from the application in JSON format using path variable" time="3.440449">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.getRequestWithPathVariable" name="To get all the data from the application in JSON format using path variable and print the response" time="0.118588">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed</system-out>
+  </testcase>
+</testsuite>

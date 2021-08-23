@@ -1,0 +1,83 @@
+<testsuite failures="0" name="com/api/automation/patchRequest/patch.feature" skipped="0" tests="3" time="0.539453">
+  <testcase classname="com.api.automation.patchRequest.patch" name="Perform a patch request to update the job description of a job entry" time="0.342776">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def jid = jobId() ....................................................... passed
+* def postResponse = call read("../CreateJobEntryReusableWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(jid)'} . passed
+Given path '/normal/webapi/update/details' ................................ passed
+* def jobDes = 'To develop andriod application and web application' ....... passed
+And params {id:'#(jid)', jobTitle:'Software Engg - Part2', jobDescription:'#(jobDes)'} . passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobDescription == jobDes ............................... passed
+Given path '/normal/webapi/remove/'+jid ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.patchRequest.patch" name="Perform a patch request to update the job description of a job entry with a non existing job ID (404 error)" time="0.122596">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def jid = jobId() ....................................................... passed
+* def postResponse = call read("../CreateJobEntryReusableWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(jid)'} . passed
+Given path '/normal/webapi/update/details' ................................ passed
+* def jobDes = 'To develop andriod application and web application' ....... passed
+And params {id:'#(jid)', jobTitle:'Software Engg - Part2', jobDescription:'#(jobDes)'} . passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobDescription == jobDes ............................... passed
+Given path '/normal/webapi/remove/'+jid ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/update/details' ................................ passed
+* def jobDes = 'To develop andriod application and web application' ....... passed
+* def jid = 80 ............................................................ passed
+And params {id:'#(jid)', jobTitle:'Software Engg - Part2', jobDescription:'#(jobDes)'} . passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 404 ........................................................... passed
+And match response.message == 'Failed to find job with id='+jid ........... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.patchRequest.patch" name="Perform a patch request to update the job description of a job entry without job title (400 error)" time="0.074081">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def jid = jobId() ....................................................... passed
+* def postResponse = call read("../CreateJobEntryReusableWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(jid)'} . passed
+Given path '/normal/webapi/update/details' ................................ passed
+* def jobDes = 'To develop andriod application and web application' ....... passed
+And params {id:'#(jid)', jobTitle:'Software Engg - Part2', jobDescription:'#(jobDes)'} . passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 200 ........................................................... passed
+And match response.jobDescription == jobDes ............................... passed
+Given path '/normal/webapi/remove/'+jid ................................... passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/update/details' ................................ passed
+* def jobDes = 'To develop andriod application and web application' ....... passed
+* def jid = 80 ............................................................ passed
+And params {id:'#(jid)', jobTitle:'Software Engg - Part2', jobDescription:'#(jobDes)'} . passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 404 ........................................................... passed
+And match response.message == 'Failed to find job with id='+jid ........... passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/update/details' ................................ passed
+* def jobDes = 'To develop andriod application and web application' ....... passed
+* def jid = 80 ............................................................ passed
+And params {id:'#(jid)', jobDescription:'#(jobDes)'} ...................... passed
+And request {} ............................................................ passed
+When method patch ......................................................... passed
+Then status 400 ........................................................... passed
+And match response.message == "Required String parameter 'jobTitle' is not present" . passed</system-out>
+  </testcase>
+</testsuite>

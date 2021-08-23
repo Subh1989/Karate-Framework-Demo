@@ -35,9 +35,9 @@
           
                     <div class="nav-count">
                                     
-                        <div class="bg-success" id="nav-pass">2</div>
+                        <div class="bg-success" id="nav-pass">0</div>
                                     
-                        <div class="bg-danger" id="nav-fail">0</div>
+                        <div class="bg-danger" id="nav-fail">2</div>
                                   
                     </div>
                             
@@ -46,14 +46,14 @@
                 <div id="nav-type">Scenarios</div>
                          
         
-                <div id="nav-date">2021-08-10 06:03:00 PM</div>
+                <div id="nav-date">2021-08-22 10:31:17 PM</div>
                         
       
                 <div class="nav-container">
-                    <div class="nav-item passed">
+                    <div class="nav-item failed">
                         <a href="#[1:7]">[1:7] To get all the data from the application in JSON format and validate the response from an external file </a>
                     </div>
-                    <div class="nav-item passed">
+                    <div class="nav-item failed">
                         <a href="#[2:16]">[2:16] To get all the data from the application in XML format and validate the response from an external file </a>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [1:7]</span><span class="scenario-name">To get all the data from the application in JSON format and validate the response from an external file </span>
                         </div>
-                        <div class="scenario-time passed">ms: 1308</div>
+                        <div class="scenario-time failed">ms: 177</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[1:7]bg">
@@ -84,39 +84,39 @@
                             <div class="step-ref bg-step">1</div>
                             <div class="step-cell passed">Given url 'http://localhost:9897'</div>
                         </div>
-                        <div class="time-cell passed">8</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="1">18:02:58.512 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="1">22:31:15.977 karate.env system property was:</div>
                     <div class="step-row" data-parent="[1:7]bg">
                         <div class="step-container" id="2">
                             <div class="step-ref bg-step">2</div>
                             <div class="step-cell passed">And print "=================Background step should execute first=================="</div>
                         </div>
-                        <div class="time-cell passed">8</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="2">18:02:58.673 [print] =================Background step should execute first==================</div>
+                    <div class="preformatted" data-parent="2">22:31:15.977 [print] =================Background step should execute first==================</div>
                     <div class="step-row">
                         <div class="step-container" id="3">
                             <div class="step-ref passed">3</div>
                             <div class="step-cell passed">Given path '/normal/webapi/all'</div>
                         </div>
-                        <div class="time-cell passed">7</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="4">
                             <div class="step-ref passed">4</div>
                             <div class="step-cell passed">And header Accept = 'application/json'</div>
                         </div>
-                        <div class="time-cell passed">6</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="5">
                             <div class="step-ref passed">5</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">1254</div>
+                        <div class="time-cell passed">161</div>
                     </div>
-                    <div class="preformatted" data-parent="5">18:02:59.735 request:
+                    <div class="preformatted" data-parent="5">22:31:15.979 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -124,12 +124,12 @@
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-18:02:59.935 response time in milliseconds: 192.30
+22:31:16.138 response time in milliseconds: 157.04
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Tue, 10 Aug 2021 12:32:59 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:15 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -137,7 +137,7 @@
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":81,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":20,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="6">
                             <div class="step-ref passed">6</div>
@@ -150,16 +150,16 @@
                             <div class="step-ref passed">7</div>
                             <div class="step-cell passed">* def expectedResponse = read("../JsonResponse.json")</div>
                         </div>
-                        <div class="time-cell passed">16</div>
+                        <div class="time-cell passed">10</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="8">
                             <div class="step-ref passed">8</div>
                             <div class="step-cell passed">And print "Expected Response is :: ", expectedResponse</div>
                         </div>
-                        <div class="time-cell passed">7</div>
+                        <div class="time-cell passed">5</div>
                     </div>
-                    <div class="preformatted" data-parent="8">18:02:59.962 [print] Expected Response is ::  [
+                    <div class="preformatted" data-parent="8">22:31:16.154 [print] Expected Response is ::  [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -183,11 +183,13 @@
 ]</div>
                     <div class="step-row">
                         <div class="step-container" id="9">
-                            <div class="step-ref passed">9</div>
-                            <div class="step-cell passed">And match response == expectedResponse</div>
+                            <div class="step-ref failed">9</div>
+                            <div class="step-cell failed">And match response == expectedResponse</div>
                         </div>
-                        <div class="time-cell passed">3</div>
+                        <div class="time-cell failed">1</div>
                     </div>
+                    <div class="preformatted" data-parent="9">22:31:16.155 assertion failed: path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":81,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":20,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 4:1
+ResponseValidationUsingExternalFile.feature:14 - path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":81,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":20,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 4:1</div>
                 </div>
                 <div class="scenario">
                     <div class="scenario-heading" id="[2:16]">
@@ -195,7 +197,7 @@
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [2:16]</span><span class="scenario-name">To get all the data from the application in XML format and validate the response from an external file </span>
                         </div>
-                        <div class="scenario-time passed">ms: 503</div>
+                        <div class="scenario-time failed">ms: 269</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[2:16]bg">
@@ -211,37 +213,37 @@
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="10">18:03:00.005 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="10">22:31:16.043 karate.env system property was:</div>
                     <div class="step-row" data-parent="[2:16]bg">
                         <div class="step-container" id="11">
                             <div class="step-ref bg-step">11</div>
                             <div class="step-cell passed">And print "=================Background step should execute first=================="</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="11">18:03:00.008 [print] =================Background step should execute first==================</div>
+                    <div class="preformatted" data-parent="11">22:31:16.044 [print] =================Background step should execute first==================</div>
                     <div class="step-row">
                         <div class="step-container" id="12">
                             <div class="step-ref passed">12</div>
                             <div class="step-cell passed">Given path '/normal/webapi/all'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="13">
                             <div class="step-ref passed">13</div>
                             <div class="step-cell passed">And header Accept = 'application/xml'</div>
                         </div>
-                        <div class="time-cell passed">8</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="14">
                             <div class="step-ref passed">14</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">317</div>
+                        <div class="time-cell passed">232</div>
                     </div>
-                    <div class="preformatted" data-parent="14">18:03:00.022 request:
+                    <div class="preformatted" data-parent="14">22:31:16.048 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/xml
 1 &gt; Accept-Encoding: gzip,deflate
@@ -249,12 +251,12 @@
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-18:03:00.332 response time in milliseconds: 309.31
+22:31:16.272 response time in milliseconds: 224.48
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/xml
-1 &lt; Date: Tue, 10 Aug 2021 12:32:59 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:15 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -262,7 +264,7 @@
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-&lt;List&gt;&lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt;&lt;/List&gt;</div>
+&lt;List&gt;&lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt;&lt;item&gt;&lt;jobId&gt;800&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg - Part2&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;experience&gt;Facebook&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;technology&gt;No Sql&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt;&lt;item&gt;&lt;jobId&gt;81&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg - Part2&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;experience&gt;Facebook&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;technology&gt;No Sql&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt;&lt;/List&gt;</div>
                     <div class="step-row">
                         <div class="step-container" id="15">
                             <div class="step-ref passed">15</div>
@@ -275,16 +277,16 @@
                             <div class="step-ref passed">16</div>
                             <div class="step-cell passed">* def expectedXml = read("../XMLResponse.xml")</div>
                         </div>
-                        <div class="time-cell passed">14</div>
+                        <div class="time-cell passed">16</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="17">
                             <div class="step-ref passed">17</div>
                             <div class="step-cell passed">And print "Expected XML is :: ", expectedXml</div>
                         </div>
-                        <div class="time-cell passed">153</div>
+                        <div class="time-cell passed">11</div>
                     </div>
-                    <div class="preformatted" data-parent="17">18:03:00.502 [print] Expected XML is ::  &lt;List&gt;&#13;
+                    <div class="preformatted" data-parent="17">22:31:16.304 [print] Expected XML is ::  &lt;List&gt;&#13;
   &lt;item&gt;&#13;
     &lt;jobId&gt;1&lt;/jobId&gt;&#13;
     &lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&#13;
@@ -308,11 +310,13 @@
 &lt;/List&gt;</div>
                     <div class="step-row">
                         <div class="step-container" id="18">
-                            <div class="step-ref passed">18</div>
-                            <div class="step-cell passed">And match response == expectedXml</div>
+                            <div class="step-ref failed">18</div>
+                            <div class="step-cell failed">And match response == expectedXml</div>
                         </div>
-                        <div class="time-cell passed">8</div>
+                        <div class="time-cell failed">9</div>
                     </div>
+                    <div class="preformatted" data-parent="18">22:31:16.313 assertion failed: path: /List/item, actual: [{jobId=1, jobTitle=Software Engg, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle]}}}}, {jobId=800, jobTitle=Software Engg - Part2, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron, Facebook]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle, No Sql]}}}}, {jobId=81, jobTitle=Software Engg - Part2, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron, Facebook]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle, No Sql]}}}}], expected: '&lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt;', reason: actual value is not map-like
+ResponseValidationUsingExternalFile.feature:23 - path: /List/item, actual: [{jobId=1, jobTitle=Software Engg, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle]}}}}, {jobId=800, jobTitle=Software Engg - Part2, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron, Facebook]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle, No Sql]}}}}, {jobId=81, jobTitle=Software Engg - Part2, jobDescription=To develop andriod application, experience={experience=[Google, Apple, Mobile Iron, Facebook]}, project={project={projectName=Movie App, technology={technology=[Kotlin, SQL Lite, Gradle, No Sql]}}}}], expected: '&lt;item&gt;&lt;jobId&gt;1&lt;/jobId&gt;&lt;jobTitle&gt;Software Engg&lt;/jobTitle&gt;&lt;jobDescription&gt;To develop andriod application&lt;/jobDescription&gt;&lt;experience&gt;&lt;experience&gt;Google&lt;/experience&gt;&lt;experience&gt;Apple&lt;/experience&gt;&lt;experience&gt;Mobile Iron&lt;/experience&gt;&lt;/experience&gt;&lt;project&gt;&lt;project&gt;&lt;projectName&gt;Movie App&lt;/projectName&gt;&lt;technology&gt;&lt;technology&gt;Kotlin&lt;/technology&gt;&lt;technology&gt;SQL Lite&lt;/technology&gt;&lt;technology&gt;Gradle&lt;/technology&gt;&lt;/technology&gt;&lt;/project&gt;&lt;/project&gt;&lt;/item&gt;', reason: actual value is not map-like</div>
                 </div>
             </div>
                 

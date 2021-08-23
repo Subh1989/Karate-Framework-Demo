@@ -1,0 +1,132 @@
+<testsuite failures="1" name="com/api/automation/endtoend/e2e.feature" skipped="0" tests="5" time="8.124399">
+  <testcase classname="com.api.automation.endtoend.e2e" name="Test the post end point to create a job entry" time="0.519458">
+    <system-out>Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. passed
+And request payload ....................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* def actualJobId = response.jobId ........................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.endtoend.e2e" name="Test the get end point to validate the job entry" time="0.038733">
+    <system-out>Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. passed
+And request payload ....................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* def actualJobId = response.jobId ........................................ passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle contains 'Software Engg - Part2' .......... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.endtoend.e2e" name="Test the put end point to update the job entry" time="3.69244">
+    <system-out>Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. passed
+And request payload ....................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* def actualJobId = response.jobId ........................................ passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle contains 'Software Engg - Part2' .......... passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ passed
+* def jobID = postResp.actualJobId ........................................ passed
+When path 'normal/webapi/update' .......................................... passed
+* def payload = read("e2eData/e2eDataUpdate.json") ........................ passed
+And request payload ....................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.endtoend.e2e" name="Test the delete end point to delete the job entry" time="3.726671">
+    <system-out>Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. passed
+And request payload ....................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* def actualJobId = response.jobId ........................................ passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle contains 'Software Engg - Part2' .......... passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ passed
+* def jobID = postResp.actualJobId ........................................ passed
+When path 'normal/webapi/update' .......................................... passed
+* def payload = read("e2eData/e2eDataUpdate.json") ........................ passed
+And request payload ....................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ passed
+* def jobID = postResp.actualJobId ........................................ passed
+Given path 'normal/webapi/remove/'+jobID .................................. passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.endtoend.e2e" name="Test the get end point to validate the job entry not present" time="0.147098">
+    <failure message="e2e.feature:44 - path: $.[*].jobTitle[*], actual: [&quot;Software Engg&quot;,&quot;Software Engg - Part2&quot;,&quot;Software Engg - Part2&quot;,&quot;Software Engg - Part2&quot;,&quot;Software Engg - Part2&quot;], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected">Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/add' ............................................ passed
+* def payload = read("e2eData/e2eData.json") .............................. passed
+And request payload ....................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+* def actualJobId = response.jobId ........................................ passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle contains 'Software Engg - Part2' .......... passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ passed
+* def jobID = postResp.actualJobId ........................................ passed
+When path 'normal/webapi/update' .......................................... passed
+* def payload = read("e2eData/e2eDataUpdate.json") ........................ passed
+And request payload ....................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+* def postResp = call read("e2e.feature@tag1") ............................ passed
+* def jobID = postResp.actualJobId ........................................ passed
+Given path 'normal/webapi/remove/'+jobID .................................. passed
+When method delete ........................................................ passed
+Then status 200 ........................................................... passed
+Given url 'http://localhost:9897/' ........................................ passed
+And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
+Given path 'normal/webapi/all' ............................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response.[*].jobTitle !contains 'Software Engg - Part2' ......... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: e2e.feature:44 - path: $.[*].jobTitle[*], actual: ["Software Engg","Software Engg - Part2","Software Engg - Part2","Software Engg - Part2","Software Engg - Part2"], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected&#13;
+	at ✽.And match response.[*].jobTitle !contains 'Software Engg - Part2' (e2e.feature:44)</failure>
+  </testcase>
+</testsuite>

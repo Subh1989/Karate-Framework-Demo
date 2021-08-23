@@ -1,0 +1,46 @@
+<testsuite failures="0" name="com/api/automation/postRequest/schemaValidation.feature" skipped="0" tests="2" time="0.43743">
+  <testcase classname="com.api.automation.postRequest.schemaValidation" name="Create a job entry with payload from external file and perform schema validation" time="0.181259">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ passed
+And request payload ....................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response == ..................................................... passed
+* def actualJobID = response.jobId ........................................ passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.postRequest.schemaValidation" name="Create a job entry with payload from external file and perform schema validation from external file" time="0.256171">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ passed
+And request payload ....................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+And match response == ..................................................... passed
+* def actualJobID = response.jobId ........................................ passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def payload = read("data/jobEntry.json") ................................ passed
+And request payload ....................................................... passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And print response ........................................................ passed
+* def schemaValidationResponse = read("data/schemaValidation.json") ....... passed
+And match response == schemaValidationResponse ............................ passed
+* def actualJobID = response.jobId ........................................ passed
+And path '/normal/webapi/remove/'+actualJobID ............................. passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,134 @@
+<testsuite failures="0" name="com/api/automation/putRequest/updateJobEntry.feature" skipped="0" tests="4" time="0.710068">
+  <testcase classname="com.api.automation.putRequest.updateJobEntry" name="To update an existing job entry" time="0.238807">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def id = jobId() ........................................................ passed
+And request { 		"jobId": '#(id)', 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/'+id ...................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.putRequest.updateJobEntry" name="To update an existing job entry by calling another feature file" time="0.11659">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def id = jobId() ........................................................ passed
+And request { 		"jobId": '#(id)', 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/'+id ...................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given call read("../CreateJobEntryReusable.feature") ...................... passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/800' ...................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.putRequest.updateJobEntry" name="To update an existing job entry by calling another feature file through shared context" time="0.1997">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def id = jobId() ........................................................ passed
+And request { 		"jobId": '#(id)', 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/'+id ...................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given call read("../CreateJobEntryReusable.feature") ...................... passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/800' ...................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResponse = call read("../CreateJobEntryReusable.feature") ....... passed
+* def jobId = postResponse.responseJobId .................................. passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.putRequest.updateJobEntry" name="To update an existing job entry by calling another feature file with variables" time="0.15497">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given path '/normal/webapi/add' ........................................... passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def id = jobId() ........................................................ passed
+And request { 		"jobId": '#(id)', 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/'+id ...................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+Given call read("../CreateJobEntryReusable.feature") ...................... passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/800' ...................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def postResponse = call read("../CreateJobEntryReusable.feature") ....... passed
+* def jobId = postResponse.responseJobId .................................. passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/'+jobId ................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed
+Given url "http://localhost:9897" ......................................... passed
+And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
+* def jobId = function() {return Math.floor((100) * Math.random());} ...... passed
+* def jid = jobId() ....................................................... passed
+* def postResponse = call read("../CreateJobEntryReusableWithVariables.feature") { _url:'http://localhost:9897', _path:'/normal/webapi/add', _id:'#(jid)'} . passed
+Given path '/normal/webapi/update' ........................................ passed
+And request ............................................................... passed
+When method put ........................................................... passed
+Then status 200 ........................................................... passed
+And path '/normal/webapi/remove/'+jid ..................................... passed
+And method delete ......................................................... passed
+And status 200 ............................................................ passed</system-out>
+  </testcase>
+</testsuite>

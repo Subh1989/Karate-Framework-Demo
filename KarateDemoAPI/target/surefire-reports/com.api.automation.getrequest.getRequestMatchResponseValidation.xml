@@ -1,0 +1,114 @@
+<testsuite failures="1" name="com/api/automation/getrequest/getRequestMatchResponseValidation.feature" skipped="0" tests="4" time="3.746596">
+  <testcase classname="com.api.automation.getrequest.getRequestMatchResponseValidation" name="To get all the data from the application in JSON format using path variable and match the response" time="0.1144">
+    <failure message="getRequestMatchResponseValidation.feature:13 - path: $, actual: [{&quot;jobId&quot;:1,&quot;jobTitle&quot;:&quot;Software Engg&quot;,&quot;project&quot;:[{&quot;technology&quot;:[&quot;Kotlin&quot;,&quot;SQL Lite&quot;,&quot;Gradle&quot;],&quot;projectName&quot;:&quot;Movie App&quot;}],&quot;jobDescription&quot;:&quot;To develop andriod application&quot;,&quot;experience&quot;:[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;]},{&quot;jobId&quot;:800,&quot;jobTitle&quot;:&quot;Software Engg - Part2&quot;,&quot;project&quot;:[{&quot;technology&quot;:[&quot;Kotlin&quot;,&quot;SQL Lite&quot;,&quot;Gradle&quot;,&quot;No Sql&quot;],&quot;projectName&quot;:&quot;Movie App&quot;}],&quot;jobDescription&quot;:&quot;To develop andriod application&quot;,&quot;experience&quot;:[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;,&quot;Facebook&quot;]},{&quot;jobId&quot;:2,&quot;jobTitle&quot;:&quot;Software Engg - Part2&quot;,&quot;project&quot;:[{&quot;technology&quot;:[&quot;Kotlin&quot;,&quot;SQL Lite&quot;,&quot;Gradle&quot;,&quot;No Sql&quot;],&quot;projectName&quot;:&quot;Movie App&quot;}],&quot;jobDescription&quot;:&quot;To develop andriod application&quot;,&quot;experience&quot;:[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;,&quot;Facebook&quot;]},{&quot;jobId&quot;:2,&quot;jobTitle&quot;:&quot;Software Engg - Part2&quot;,&quot;project&quot;:[{&quot;technology&quot;:[&quot;Kotlin&quot;,&quot;SQL Lite&quot;,&quot;Gradle&quot;,&quot;No Sql&quot;],&quot;projectName&quot;:&quot;Movie App&quot;}],&quot;jobDescription&quot;:&quot;To develop andriod application&quot;,&quot;experience&quot;:[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;,&quot;Facebook&quot;]},{&quot;jobId&quot;:2,&quot;jobTitle&quot;:&quot;Software Engg - Part2&quot;,&quot;project&quot;:[{&quot;technology&quot;:[&quot;Kotlin&quot;,&quot;SQL Lite&quot;,&quot;Gradle&quot;,&quot;No Sql&quot;],&quot;projectName&quot;:&quot;Movie App&quot;}],&quot;jobDescription&quot;:&quot;To develop andriod application&quot;,&quot;experience&quot;:[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;,&quot;Facebook&quot;]}], expected: [{&quot;jobId&quot;:1,&quot;jobTitle&quot;:&quot;Software Engg&quot;,&quot;project&quot;:[{&quot;technology&quot;:[&quot;Kotlin&quot;,&quot;SQL Lite&quot;,&quot;Gradle&quot;],&quot;projectName&quot;:&quot;Movie App&quot;}],&quot;jobDescription&quot;:&quot;To develop andriod application&quot;,&quot;experience&quot;:[&quot;Google&quot;,&quot;Apple&quot;,&quot;Mobile Iron&quot;]}], reason: actual and expected arrays are not the same size - 5:1">Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response == ..................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 5:1&#13;
+	at ✽.And match response == (getRequestMatchResponseValidation.feature:13)</failure>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.getRequestMatchResponseValidation" name="To get all the data from the application in JSON format using path variable and match the response using negate operator" time="3.495223">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response == ..................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 5:1&#13;
+	at ✽.And match response == (getRequestMatchResponseValidation.feature:13)&#13;
+
+Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response != ..................................................... passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.getRequestMatchResponseValidation" name="To get all the data from the application in JSON format using path variable and match the nested json array and nested json object" time="0.06696">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response == ..................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 5:1&#13;
+	at ✽.And match response == (getRequestMatchResponseValidation.feature:13)&#13;
+
+Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response != ..................................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response contains deep {"jobDescription": "To develop andriod application"} . passed
+And match response contains deep {"project":[{"projectName": "Movie App"}]} . passed</system-out>
+  </testcase>
+  <testcase classname="com.api.automation.getrequest.getRequestMatchResponseValidation" name="To get all the data from the application in JSON format using path variable and match the response header" time="0.070014">
+    <system-out>Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response == ..................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 5:1&#13;
+	at ✽.And match response == (getRequestMatchResponseValidation.feature:13)&#13;
+
+Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response != ..................................................... passed
+Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response contains deep {"jobDescription": "To develop andriod application"} . passed
+And match response contains deep {"project":[{"projectName": "Movie App"}]} . passed
+Given url 'http://localhost:9897' ......................................... passed
+And print "=================Background step should execute first==================" . passed
+Given path '/normal/webapi/all' ........................................... passed
+And header Accept = 'application/json' .................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And print response ........................................................ passed
+And match response contains deep {"jobDescription": "To develop andriod application"} . passed
+And match response contains deep {"project":[{"projectName": "Movie App"}]} . passed
+And match header Content-Type == 'application/json' ....................... passed
+And match header Connection == 'keep-alive' ............................... passed</system-out>
+  </testcase>
+</testsuite>
