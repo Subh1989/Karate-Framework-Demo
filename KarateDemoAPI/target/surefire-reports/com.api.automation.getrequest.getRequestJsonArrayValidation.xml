@@ -1,5 +1,5 @@
-<testsuite failures="0" name="com/api/automation/getrequest/getRequestJsonArrayValidation.feature" skipped="0" tests="1" time="0.064698">
-  <testcase classname="com.api.automation.getrequest.getRequestJsonArrayValidation" name="To get all the data from the application in JSON format and perform json array validation" time="0.064698">
+<testsuite failures="0" name="com/api/automation/getrequest/getRequestJsonArrayValidation.feature" skipped="0" tests="1" time="0.189791">
+  <testcase classname="com.api.automation.getrequest.getRequestJsonArrayValidation" name="To get all the data from the application in JSON format and perform json array validation" time="0.189791">
     <system-out>Given url 'http://localhost:9897' ......................................... passed
 And print "=================Background step should execute first==================" . passed
 Given path '/normal/webapi/all' ........................................... passed

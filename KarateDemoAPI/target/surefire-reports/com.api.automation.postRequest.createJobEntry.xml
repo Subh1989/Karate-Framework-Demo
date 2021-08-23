@@ -1,5 +1,5 @@
-<testsuite failures="1" name="com/api/automation/postRequest/createJobEntry.feature" skipped="0" tests="9" time="1.177089">
-  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry" time="0.039653">
+<testsuite failures="1" name="com/api/automation/postRequest/createJobEntry.feature" skipped="0" tests="9" time="1.350946">
+  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry" time="0.087893">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -10,8 +10,8 @@ And print response ........................................................ pass
 And match response.jobTitle == 'Software Engg - Part2' .................... passed
 * def actualJobID = response.jobId ........................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Delete the job entry tagged with tag1" time="0.243077">
-    <failure message="createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 42, url: http://localhost:9897/normal/webapi/remove/5, response: {&quot;message&quot;:&quot;Entry with id = 5 not found&quot;}">Given url "http://localhost:9897" ......................................... passed
+  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Delete the job entry tagged with tag1" time="0.511923">
+    <failure message="createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 222, url: http://localhost:9897/normal/webapi/remove/5, response: {&quot;message&quot;:&quot;Entry with id = 5 not found&quot;}">Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
 And request { 		"jobId": 5, 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . passed
@@ -29,10 +29,10 @@ When method delete ........................................................ pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 42, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
+com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 222, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
 	at ✽.Then status 200 (createJobEntry.feature:25)</failure>
   </testcase>
-  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry with payload from external file" time="0.072123">
+  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry with payload from external file" time="0.091647">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -51,7 +51,7 @@ When method delete ........................................................ pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 42, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
+com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 222, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
 	at ✽.Then status 200 (createJobEntry.feature:25)&#13;
 
 Given url "http://localhost:9897" ......................................... passed
@@ -65,7 +65,7 @@ And print response ........................................................ pass
 And match response.jobTitle == 'Software Engg - Part2' .................... passed
 * def actualJobID = response.jobId ........................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Delete the job entry tagged with tag2" time="0.149223">
+  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Delete the job entry tagged with tag2" time="0.156213">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -84,7 +84,7 @@ When method delete ........................................................ pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 42, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
+com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 222, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
 	at ✽.Then status 200 (createJobEntry.feature:25)&#13;
 
 Given url "http://localhost:9897" ......................................... passed
@@ -105,7 +105,7 @@ And path '/normal/webapi/remove/'+jobId ................................... pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.121145">
+  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.079679">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -124,7 +124,7 @@ When method delete ........................................................ pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 42, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
+com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 222, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
 	at ✽.Then status 200 (createJobEntry.feature:25)&#13;
 
 Given url "http://localhost:9897" ......................................... passed
@@ -157,7 +157,7 @@ And path '/normal/webapi/remove/'+actualJobID ............................. pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.209937">
+  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.11525">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -176,7 +176,7 @@ When method delete ........................................................ pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 42, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
+com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 222, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
 	at ✽.Then status 200 (createJobEntry.feature:25)&#13;
 
 Given url "http://localhost:9897" ......................................... passed
@@ -221,7 +221,7 @@ And path '/normal/webapi/remove/'+actualJobID ............................. pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.220473">
+  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.118213">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -240,7 +240,7 @@ When method delete ........................................................ pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 42, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
+com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 222, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
 	at ✽.Then status 200 (createJobEntry.feature:25)&#13;
 
 Given url "http://localhost:9897" ......................................... passed
@@ -297,7 +297,7 @@ And path '/normal/webapi/remove/'+actualJobID ............................. pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.061183">
+  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.072755">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -316,7 +316,7 @@ When method delete ........................................................ pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 42, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
+com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 222, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
 	at ✽.Then status 200 (createJobEntry.feature:25)&#13;
 
 Given url "http://localhost:9897" ......................................... passed
@@ -385,7 +385,7 @@ And path '/normal/webapi/remove/'+actualJobID ............................. pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.060275">
+  <testcase classname="com.api.automation.postRequest.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.117372">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -404,7 +404,7 @@ When method delete ........................................................ pass
 Then status 200 ........................................................... failed
 
 Stack Trace:
-com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 42, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
+com.intuit.karate.exception.KarateException: createJobEntry.feature:25 - status code was: 404, expected: 200, response time: 222, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
 	at ✽.Then status 200 (createJobEntry.feature:25)&#13;
 
 Given url "http://localhost:9897" ......................................... passed

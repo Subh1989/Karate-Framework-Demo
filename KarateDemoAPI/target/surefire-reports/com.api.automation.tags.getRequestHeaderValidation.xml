@@ -1,5 +1,5 @@
-<testsuite failures="0" name="com/api/automation/tags/getRequestHeaderValidation.feature" skipped="0" tests="2" time="0.018199">
-  <testcase classname="com.api.automation.tags.getRequestHeaderValidation" name="To get all the data from the application in JSON format using path variable and print the response" time="0.006811">
+<testsuite failures="0" name="com/api/automation/tags/getRequestHeaderValidation.feature" skipped="0" tests="2" time="0.257607">
+  <testcase classname="com.api.automation.tags.getRequestHeaderValidation" name="To get all the data from the application in JSON format using path variable and print the response" time="0.199897">
     <system-out>Given url 'http://localhost:9897' ......................................... passed
 And print "=================Background step should execute first==================" . passed
 Given path '/normal/webapi/all' ........................................... passed
@@ -7,7 +7,7 @@ And header Accept = 'application/json' .................................... pass
 When method get ........................................................... passed
 Then status 200 ........................................................... passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.tags.getRequestHeaderValidation" name="To get all the data from the application in XML format using path variable and print the response" time="0.011388">
+  <testcase classname="com.api.automation.tags.getRequestHeaderValidation" name="To get all the data from the application in XML format using path variable and print the response" time="0.05771">
     <system-out>Given url 'http://localhost:9897' ......................................... passed
 And print "=================Background step should execute first==================" . passed
 Given path '/normal/webapi/all' ........................................... passed

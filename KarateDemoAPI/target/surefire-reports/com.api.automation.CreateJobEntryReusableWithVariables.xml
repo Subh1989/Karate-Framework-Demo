@@ -1,5 +1,5 @@
-<testsuite failures="1" name="com/api/automation/CreateJobEntryReusableWithVariables.feature" skipped="0" tests="1" time="0.012759">
-  <testcase classname="com.api.automation.CreateJobEntryReusableWithVariables" name="1" time="0.012759">
+<testsuite failures="1" name="com/api/automation/CreateJobEntryReusableWithVariables.feature" skipped="0" tests="1" time="0.016733">
+  <testcase classname="com.api.automation.CreateJobEntryReusableWithVariables" name="1" time="0.016733">
     <failure message="-unknown-:3 - evaluation (js) failed: _url, javax.script.ScriptException: ReferenceError: &quot;_url&quot; is not defined in &lt;eval&gt; at line number 1&#10;stack trace: jdk.scripting.nashorn/jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:477)">Given url _url ............................................................ failed
 
 Stack Trace:
@@ -15,6 +15,7 @@ And print " id :: ", _id .................................................. skip
 And request { 		"jobId": '#(_id)', 		"jobTitle": "Software Engg - Part2", 		"project": [ 			{ 				"technology": [ 					"Kotlin", 					"SQL Lite", 					"Gradle", 					"No Sql" 				], 				"projectName": "Movie App" 			} 		], 		"jobDescription": "To develop andriod application", 		"experience": [ 			"Google", 			"Apple", 			"Mobile Iron", 			"Facebook" 		] 	} . skipped
 When method post .......................................................... skipped
 Then status 201 ........................................................... skipped
-* def responseJobId = response.jobId ...................................... skipped</failure>
+* def responseJobId = response.jobId ...................................... skipped
+* def responseJobTitle = response.jobTitle ................................ skipped</failure>
   </testcase>
 </testsuite>

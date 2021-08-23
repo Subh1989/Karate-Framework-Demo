@@ -46,7 +46,7 @@
                 <div id="nav-type">Scenarios</div>
                          
         
-                <div id="nav-date">2021-08-11 09:30:45 AM</div>
+                <div id="nav-date">2021-08-22 10:31:17 PM</div>
                         
       
                 <div class="nav-container">
@@ -76,7 +76,7 @@
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [1:7]</span><span class="scenario-name">To get all the data from the application in JSON format using path variable and match the response </span>
                         </div>
-                        <div class="scenario-time failed">ms: 40</div>
+                        <div class="scenario-time failed">ms: 114</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[1:7]bg">
@@ -92,21 +92,21 @@
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="1">09:30:44.544 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="1">22:31:12.310 karate.env system property was:</div>
                     <div class="step-row" data-parent="[1:7]bg">
                         <div class="step-container" id="2">
                             <div class="step-ref bg-step">2</div>
                             <div class="step-cell passed">And print "=================Background step should execute first=================="</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">3</div>
                     </div>
-                    <div class="preformatted" data-parent="2">09:30:44.544 [print] =================Background step should execute first==================</div>
+                    <div class="preformatted" data-parent="2">22:31:12.313 [print] =================Background step should execute first==================</div>
                     <div class="step-row">
                         <div class="step-container" id="3">
                             <div class="step-ref passed">3</div>
                             <div class="step-cell passed">Given path '/normal/webapi/all'</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">3</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="4">
@@ -120,9 +120,9 @@
                             <div class="step-ref passed">5</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">39</div>
+                        <div class="time-cell passed">107</div>
                     </div>
-                    <div class="preformatted" data-parent="5">09:30:44.544 request:
+                    <div class="preformatted" data-parent="5">22:31:12.334 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -130,12 +130,12 @@
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:44.591 response time in milliseconds: 16.00
+22:31:12.424 response time in milliseconds: 88.77
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:12 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -143,7 +143,7 @@
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="6">
                             <div class="step-ref passed">6</div>
@@ -156,9 +156,9 @@
                             <div class="step-ref passed">7</div>
                             <div class="step-cell passed">And print response</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">1</div>
                     </div>
-                    <div class="preformatted" data-parent="7">09:30:44.591 [print] [
+                    <div class="preformatted" data-parent="7">22:31:12.425 [print] [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -177,6 +177,28 @@
       "Google",
       "Apple",
       "Mobile Iron"
+    ]
+  },
+  {
+    "jobId": 800,
+    "jobTitle": "Software Engg - Part2",
+    "project": [
+      {
+        "technology": [
+          "Kotlin",
+          "SQL Lite",
+          "Gradle",
+          "No Sql"
+        ],
+        "projectName": "Movie App"
+      }
+    ],
+    "jobDescription": "To develop andriod application",
+    "experience": [
+      "Google",
+      "Apple",
+      "Mobile Iron",
+      "Facebook"
     ]
   },
   {
@@ -202,7 +224,29 @@
     ]
   },
   {
-    "jobId": 800,
+    "jobId": 2,
+    "jobTitle": "Software Engg - Part2",
+    "project": [
+      {
+        "technology": [
+          "Kotlin",
+          "SQL Lite",
+          "Gradle",
+          "No Sql"
+        ],
+        "projectName": "Movie App"
+      }
+    ],
+    "jobDescription": "To develop andriod application",
+    "experience": [
+      "Google",
+      "Apple",
+      "Mobile Iron",
+      "Facebook"
+    ]
+  },
+  {
+    "jobId": 2,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -253,8 +297,8 @@
 		]
 	}
 ]
-09:30:44.591 assertion failed: path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 3:1
-getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 3:1</div>
+22:31:12.426 assertion failed: path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 5:1
+getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]},{"jobId":800,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]},{"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}], expected: [{"jobId":1,"jobTitle":"Software Engg","project":[{"technology":["Kotlin","SQL Lite","Gradle"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"]}], reason: actual and expected arrays are not the same size - 5:1</div>
                 </div>
                 <div class="scenario">
                     <div class="scenario-heading" id="[2:37]">
@@ -262,7 +306,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [2:37]</span><span class="scenario-name">To get all the data from the application in JSON format using path variable and match the response using negate operator </span>
                         </div>
-                        <div class="scenario-time passed">ms: 27</div>
+                        <div class="scenario-time passed">ms: 3495</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[2:37]bg">
@@ -278,7 +322,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="9">09:30:44.576 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="9">22:31:12.433 karate.env system property was:</div>
                     <div class="step-row" data-parent="[2:37]bg">
                         <div class="step-container" id="10">
                             <div class="step-ref bg-step">10</div>
@@ -286,13 +330,13 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="10">09:30:44.576 [print] =================Background step should execute first==================</div>
+                    <div class="preformatted" data-parent="10">22:31:12.434 [print] =================Background step should execute first==================</div>
                     <div class="step-row">
                         <div class="step-container" id="11">
                             <div class="step-ref passed">11</div>
                             <div class="step-cell passed">Given path '/normal/webapi/all'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="12">
@@ -306,9 +350,9 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                             <div class="step-ref passed">13</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">20</div>
+                        <div class="time-cell passed">3494</div>
                     </div>
-                    <div class="preformatted" data-parent="13">09:30:44.591 request:
+                    <div class="preformatted" data-parent="13">22:31:12.437 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -316,12 +360,12 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:44.607 response time in milliseconds: 12.74
+22:31:15.929 response time in milliseconds: 3490.21
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:15 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -329,7 +373,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="14">
                             <div class="step-ref passed">14</div>
@@ -342,9 +386,9 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                             <div class="step-ref passed">15</div>
                             <div class="step-cell passed">And print response</div>
                         </div>
-                        <div class="time-cell passed">5</div>
+                        <div class="time-cell passed">1</div>
                     </div>
-                    <div class="preformatted" data-parent="15">09:30:44.607 [print] [
+                    <div class="preformatted" data-parent="15">22:31:15.930 [print] [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -366,51 +410,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
     ]
   },
   {
-    "jobId": 2,
-    "jobTitle": "Software Engg - Part2",
-    "project": [
-      {
-        "technology": [
-          "Kotlin",
-          "SQL Lite",
-          "Gradle",
-          "No Sql"
-        ],
-        "projectName": "Movie App"
-      }
-    ],
-    "jobDescription": "To develop andriod application",
-    "experience": [
-      "Google",
-      "Apple",
-      "Mobile Iron",
-      "Facebook"
-    ]
-  },
-  {
     "jobId": 800,
-    "jobTitle": "Software Engg - Part2",
-    "project": [
-      {
-        "technology": [
-          "Kotlin",
-          "SQL Lite",
-          "Gradle",
-          "No Sql"
-        ],
-        "projectName": "Movie App"
-      }
-    ],
-    "jobDescription": "To develop andriod application",
-    "experience": [
-      "Google",
-      "Apple",
-      "Mobile Iron",
-      "Facebook"
-    ]
-  },
-  {
-    "jobId": 2,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -468,7 +468,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [3:67]</span><span class="scenario-name">To get all the data from the application in JSON format using path variable and match the nested json array and nested json object </span>
                         </div>
-                        <div class="scenario-time passed">ms: 33</div>
+                        <div class="scenario-time passed">ms: 67</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[3:67]bg">
@@ -484,7 +484,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="17">09:30:44.591 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="17">22:31:15.941 karate.env system property was:</div>
                     <div class="step-row" data-parent="[3:67]bg">
                         <div class="step-container" id="18">
                             <div class="step-ref bg-step">18</div>
@@ -492,7 +492,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="18">09:30:44.607 [print] =================Background step should execute first==================</div>
+                    <div class="preformatted" data-parent="18">22:31:15.941 [print] =================Background step should execute first==================</div>
                     <div class="step-row">
                         <div class="step-container" id="19">
                             <div class="step-ref passed">19</div>
@@ -505,16 +505,16 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                             <div class="step-ref passed">20</div>
                             <div class="step-cell passed">And header Accept = 'application/json'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="21">
                             <div class="step-ref passed">21</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">29</div>
+                        <div class="time-cell passed">66</div>
                     </div>
-                    <div class="preformatted" data-parent="21">09:30:44.607 request:
+                    <div class="preformatted" data-parent="21">22:31:15.943 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -522,12 +522,12 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:44.638 response time in milliseconds: 24.15
+22:31:16.007 response time in milliseconds: 63.11
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:15 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -535,7 +535,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":81,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":20,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="22">
                             <div class="step-ref passed">22</div>
@@ -550,7 +550,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                         </div>
                         <div class="time-cell passed">1</div>
                     </div>
-                    <div class="preformatted" data-parent="23">09:30:44.638 [print] [
+                    <div class="preformatted" data-parent="23">22:31:16.007 [print] [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -569,28 +569,6 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
       "Google",
       "Apple",
       "Mobile Iron"
-    ]
-  },
-  {
-    "jobId": 2,
-    "jobTitle": "Software Engg - Part2",
-    "project": [
-      {
-        "technology": [
-          "Kotlin",
-          "SQL Lite",
-          "Gradle",
-          "No Sql"
-        ],
-        "projectName": "Movie App"
-      }
-    ],
-    "jobDescription": "To develop andriod application",
-    "experience": [
-      "Google",
-      "Apple",
-      "Mobile Iron",
-      "Facebook"
     ]
   },
   {
@@ -616,7 +594,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
     ]
   },
   {
-    "jobId": 2,
+    "jobId": 81,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -638,7 +616,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
     ]
   },
   {
-    "jobId": 2,
+    "jobId": 20,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -665,7 +643,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                             <div class="step-ref passed">24</div>
                             <div class="step-cell passed">And match response contains deep {"jobDescription": "To develop andriod application"}</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="25">
@@ -681,7 +659,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [4:76]</span><span class="scenario-name">To get all the data from the application in JSON format using path variable and match the response header </span>
                         </div>
-                        <div class="scenario-time passed">ms: 40</div>
+                        <div class="scenario-time passed">ms: 70</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[4:76]bg">
@@ -697,15 +675,15 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="26">09:30:44.591 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="26">22:31:15.941 karate.env system property was:</div>
                     <div class="step-row" data-parent="[4:76]bg">
                         <div class="step-container" id="27">
                             <div class="step-ref bg-step">27</div>
                             <div class="step-cell passed">And print "=================Background step should execute first=================="</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="27">09:30:44.607 [print] =================Background step should execute first==================</div>
+                    <div class="preformatted" data-parent="27">22:31:15.941 [print] =================Background step should execute first==================</div>
                     <div class="step-row">
                         <div class="step-container" id="28">
                             <div class="step-ref passed">28</div>
@@ -725,9 +703,9 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                             <div class="step-ref passed">30</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">34</div>
+                        <div class="time-cell passed">66</div>
                     </div>
-                    <div class="preformatted" data-parent="30">09:30:44.623 request:
+                    <div class="preformatted" data-parent="30">22:31:15.943 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -735,12 +713,12 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:44.638 response time in milliseconds: 8.63
+22:31:16.007 response time in milliseconds: 62.87
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:15 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -748,7 +726,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":81,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":20,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="31">
                             <div class="step-ref passed">31</div>
@@ -763,7 +741,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                         </div>
                         <div class="time-cell passed">1</div>
                     </div>
-                    <div class="preformatted" data-parent="32">09:30:44.638 [print] [
+                    <div class="preformatted" data-parent="32">22:31:16.007 [print] [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -782,28 +760,6 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
       "Google",
       "Apple",
       "Mobile Iron"
-    ]
-  },
-  {
-    "jobId": 2,
-    "jobTitle": "Software Engg - Part2",
-    "project": [
-      {
-        "technology": [
-          "Kotlin",
-          "SQL Lite",
-          "Gradle",
-          "No Sql"
-        ],
-        "projectName": "Movie App"
-      }
-    ],
-    "jobDescription": "To develop andriod application",
-    "experience": [
-      "Google",
-      "Apple",
-      "Mobile Iron",
-      "Facebook"
     ]
   },
   {
@@ -829,7 +785,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
     ]
   },
   {
-    "jobId": 2,
+    "jobId": 81,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -851,7 +807,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
     ]
   },
   {
-    "jobId": 2,
+    "jobId": 20,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -899,7 +855,7 @@ getRequestMatchResponseValidation.feature:13 - path: $, actual: [{"jobId":1,"job
                             <div class="step-ref passed">36</div>
                             <div class="step-cell passed">And match header Connection == 'keep-alive'</div>
                         </div>
-                        <div class="time-cell passed">3</div>
+                        <div class="time-cell passed">2</div>
                     </div>
                 </div>
             </div>

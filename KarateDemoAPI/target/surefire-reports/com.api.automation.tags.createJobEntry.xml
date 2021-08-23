@@ -1,5 +1,5 @@
-<testsuite failures="2" name="com/api/automation/tags/createJobEntry.feature" skipped="0" tests="9" time="0.742486">
-  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry" time="0.069542">
+<testsuite failures="2" name="com/api/automation/tags/createJobEntry.feature" skipped="0" tests="9" time="1.241518">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry" time="0.12225">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -10,7 +10,7 @@ And print response ........................................................ pass
 And match response.jobTitle == 'Software Engg - Part2' .................... passed
 * def actualJobID = response.jobId ........................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.tags.createJobEntry" name="Delete the job entry tagged with tag1" time="0.164925">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Delete the job entry tagged with tag1" time="0.277955">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -28,7 +28,7 @@ And path '/normal/webapi/remove/'+jobId ................................... pass
 When method delete ........................................................ passed
 Then status 200 ........................................................... passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry with payload from external file" time="0.003301">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry with payload from external file" time="0.010372">
     <failure message="createJobEntry.feature:31 - could not find or read file: data/jobEntry.json">Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -61,7 +61,7 @@ And print response ........................................................ skip
 And match response.jobTitle == 'Software Engg - Part2' .................... skipped
 * def actualJobID = response.jobId ........................................ skipped</failure>
   </testcase>
-  <testcase classname="com.api.automation.tags.createJobEntry" name="Delete the job entry tagged with tag2" time="0.059271">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Delete the job entry tagged with tag2" time="0.043484">
     <failure message="createJobEntry.feature:41 - &#10;createJobEntry.feature:31 - could not find or read file: data/jobEntry.json">Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -107,7 +107,7 @@ And path '/normal/webapi/remove/'+jobId ................................... skip
 And method delete ......................................................... skipped
 And status 200 ............................................................ skipped</failure>
   </testcase>
-  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.112947">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.187855">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -165,7 +165,7 @@ And path '/normal/webapi/remove/'+actualJobID ............................. pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.09353">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.235993">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -235,7 +235,7 @@ And path '/normal/webapi/remove/'+actualJobID ............................. pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.083131">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.135368">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -317,7 +317,7 @@ And path '/normal/webapi/remove/'+actualJobID ............................. pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.090556">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.117606">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -411,7 +411,7 @@ And path '/normal/webapi/remove/'+actualJobID ............................. pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.065282">
+  <testcase classname="com.api.automation.tags.createJobEntry" name="Create a job entry using multiple data parameterization" time="0.110635">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed

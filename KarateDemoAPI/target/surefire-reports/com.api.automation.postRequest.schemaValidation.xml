@@ -1,5 +1,5 @@
-<testsuite failures="1" name="com/api/automation/postRequest/schemaValidation.feature" skipped="0" tests="2" time="0.146382">
-  <testcase classname="com.api.automation.postRequest.schemaValidation" name="Create a job entry with payload from external file and perform schema validation" time="0.066">
+<testsuite failures="0" name="com/api/automation/postRequest/schemaValidation.feature" skipped="0" tests="2" time="0.43743">
+  <testcase classname="com.api.automation.postRequest.schemaValidation" name="Create a job entry with payload from external file and perform schema validation" time="0.181259">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
@@ -14,8 +14,8 @@ And path '/normal/webapi/remove/'+actualJobID ............................. pass
 And method delete ......................................................... passed
 And status 200 ............................................................ passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.postRequest.schemaValidation" name="Create a job entry with payload from external file and perform schema validation from external file" time="0.080382">
-    <failure message="schemaValidation.feature:42 - status code was: 404, expected: 200, response time: 29, url: http://localhost:9897/normal/webapi/remove/5, response: {&quot;message&quot;:&quot;Entry with id = 5 not found&quot;}">Given url "http://localhost:9897" ......................................... passed
+  <testcase classname="com.api.automation.postRequest.schemaValidation" name="Create a job entry with payload from external file and perform schema validation from external file" time="0.256171">
+    <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed
 * def payload = read("data/jobEntry.json") ................................ passed
@@ -41,10 +41,6 @@ And match response == schemaValidationResponse ............................ pass
 * def actualJobID = response.jobId ........................................ passed
 And path '/normal/webapi/remove/'+actualJobID ............................. passed
 And method delete ......................................................... passed
-And status 200 ............................................................ failed
-
-Stack Trace:
-com.intuit.karate.exception.KarateException: schemaValidation.feature:42 - status code was: 404, expected: 200, response time: 29, url: http://localhost:9897/normal/webapi/remove/5, response: {"message":"Entry with id = 5 not found"}&#13;
-	at ✽.And status 200 (schemaValidation.feature:42)</failure>
+And status 200 ............................................................ passed</system-out>
   </testcase>
 </testsuite>

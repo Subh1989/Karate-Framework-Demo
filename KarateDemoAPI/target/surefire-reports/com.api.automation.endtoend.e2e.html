@@ -35,9 +35,9 @@
           
                     <div class="nav-count">
                                     
-                        <div class="bg-success" id="nav-pass">3</div>
+                        <div class="bg-success" id="nav-pass">4</div>
                                     
-                        <div class="bg-danger" id="nav-fail">2</div>
+                        <div class="bg-danger" id="nav-fail">1</div>
                                   
                     </div>
                             
@@ -46,7 +46,7 @@
                 <div id="nav-type">Scenarios</div>
                          
         
-                <div id="nav-date">2021-08-11 09:30:45 AM</div>
+                <div id="nav-date">2021-08-22 10:31:17 PM</div>
                         
       
                 <div class="nav-container">
@@ -56,7 +56,7 @@
                     <div class="nav-item passed">
                         <a href="#[2:16]">[2:16] Test the get end point to validate the job entry </a>
                     </div>
-                    <div class="nav-item failed">
+                    <div class="nav-item passed">
                         <a href="#[3:23]">[3:23] Test the put end point to update the job entry </a>
                     </div>
                     <div class="nav-item passed">
@@ -81,7 +81,7 @@
                             </div>
                             <span class="scenario-keyword">Scenario: [1:8]</span><span class="scenario-name">Test the post end point to create a job entry </span>
                         </div>
-                        <div class="scenario-time passed">ms: 537</div>
+                        <div class="scenario-time passed">ms: 519</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[1:8]bg">
@@ -95,15 +95,15 @@
                             <div class="step-ref bg-step">1</div>
                             <div class="step-cell passed">Given url 'http://localhost:9897/'</div>
                         </div>
-                        <div class="time-cell passed">4</div>
+                        <div class="time-cell passed">8</div>
                     </div>
-                    <div class="preformatted" data-parent="1">09:30:43.953 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="1">22:31:11.560 karate.env system property was:</div>
                     <div class="step-row" data-parent="[1:8]bg">
                         <div class="step-container" id="2">
                             <div class="step-ref bg-step">2</div>
                             <div class="step-cell passed">And headers {Accept:'application/json', Content-Type:'application/json'}</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="3">
@@ -117,7 +117,7 @@
                             <div class="step-ref passed">4</div>
                             <div class="step-cell passed">* def payload = read("e2eData/e2eData.json")</div>
                         </div>
-                        <div class="time-cell passed">23</div>
+                        <div class="time-cell passed">8</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="5">
@@ -131,9 +131,9 @@
                             <div class="step-ref passed">6</div>
                             <div class="step-cell passed">When method post</div>
                         </div>
-                        <div class="time-cell passed">492</div>
+                        <div class="time-cell passed">497</div>
                     </div>
-                    <div class="preformatted" data-parent="6">09:30:44.444 request:
+                    <div class="preformatted" data-parent="6">22:31:12.018 request:
 1 &gt; POST http://localhost:9897/normal/webapi/add
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -144,12 +144,12 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 {"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
 
-09:30:44.475 response time in milliseconds: 31.23
+22:31:12.079 response time in milliseconds: 59.88
 1 &lt; 201
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:12 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -170,7 +170,7 @@
                             <div class="step-ref passed">8</div>
                             <div class="step-cell passed">* def actualJobId = response.jobId</div>
                         </div>
-                        <div class="time-cell passed">13</div>
+                        <div class="time-cell passed">2</div>
                     </div>
                 </div>
                 <div class="scenario">
@@ -179,7 +179,7 @@
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [2:16]</span><span class="scenario-name">Test the get end point to validate the job entry </span>
                         </div>
-                        <div class="scenario-time passed">ms: 20</div>
+                        <div class="scenario-time passed">ms: 39</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[2:16]bg">
@@ -195,7 +195,7 @@
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="9">09:30:44.491 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="9">22:31:12.090 karate.env system property was:</div>
                     <div class="step-row" data-parent="[2:16]bg">
                         <div class="step-container" id="10">
                             <div class="step-ref bg-step">10</div>
@@ -208,16 +208,16 @@
                             <div class="step-ref passed">11</div>
                             <div class="step-cell passed">Given path 'normal/webapi/all'</div>
                         </div>
-                        <div class="time-cell passed">8</div>
+                        <div class="time-cell passed">3</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="12">
                             <div class="step-ref passed">12</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">8</div>
+                        <div class="time-cell passed">29</div>
                     </div>
-                    <div class="preformatted" data-parent="12">09:30:44.507 request:
+                    <div class="preformatted" data-parent="12">22:31:12.096 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -226,12 +226,12 @@
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:44.507 response time in milliseconds: 5.03
+22:31:12.122 response time in milliseconds: 25.70
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:12 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -239,7 +239,7 @@
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":42,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="13">
                             <div class="step-ref passed">13</div>
@@ -254,7 +254,7 @@
                         </div>
                         <div class="time-cell passed">1</div>
                     </div>
-                    <div class="preformatted" data-parent="14">09:30:44.507 [print] [
+                    <div class="preformatted" data-parent="14">22:31:12.123 [print] [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -273,6 +273,28 @@
       "Google",
       "Apple",
       "Mobile Iron"
+    ]
+  },
+  {
+    "jobId": 800,
+    "jobTitle": "Software Engg - Part2",
+    "project": [
+      {
+        "technology": [
+          "Kotlin",
+          "SQL Lite",
+          "Gradle",
+          "No Sql"
+        ],
+        "projectName": "Movie App"
+      }
+    ],
+    "jobDescription": "To develop andriod application",
+    "experience": [
+      "Google",
+      "Apple",
+      "Mobile Iron",
+      "Facebook"
     ]
   },
   {
@@ -298,7 +320,7 @@
     ]
   },
   {
-    "jobId": 800,
+    "jobId": 42,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -325,7 +347,7 @@
                             <div class="step-ref passed">15</div>
                             <div class="step-cell passed">And match response.[*].jobTitle contains 'Software Engg - Part2'</div>
                         </div>
-                        <div class="time-cell passed">4</div>
+                        <div class="time-cell passed">6</div>
                     </div>
                 </div>
                 <div class="scenario">
@@ -334,7 +356,7 @@
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [3:23]</span><span class="scenario-name">Test the put end point to update the job entry </span>
                         </div>
-                        <div class="scenario-time failed">ms: 233</div>
+                        <div class="scenario-time passed">ms: 3692</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[3:23]bg">
@@ -350,7 +372,7 @@
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="16">09:30:44.522 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="16">22:31:12.138 karate.env system property was:</div>
                     <div class="step-row" data-parent="[3:23]bg">
                         <div class="step-container" id="17">
                             <div class="step-ref bg-step">17</div>
@@ -363,14 +385,14 @@
                             <div class="step-ref passed">18</div>
                             <div class="step-cell passed">* def postResp = call read("e2e.feature@tag1")</div>
                         </div>
-                        <div class="time-cell passed">78</div>
+                        <div class="time-cell passed">154</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="18.1">
                             <div class="step-ref passed">&gt;&gt;</div>
                             <div class="step-cell passed">com/api/automation/endtoend/e2e.feature</div>
                         </div>
-                        <div class="time-cell passed">45</div>
+                        <div class="time-cell passed">106</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="19">
@@ -378,7 +400,7 @@
                             <div class="step-indent"> </div>
                             <div class="step-cell passed">Given url 'http://localhost:9897/'</div>
                         </div>
-                        <div class="time-cell passed">2</div>
+                        <div class="time-cell passed">12</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="20">
@@ -418,9 +440,9 @@
                             <div class="step-indent"> </div>
                             <div class="step-cell passed">When method post</div>
                         </div>
-                        <div class="time-cell passed">39</div>
+                        <div class="time-cell passed">90</div>
                     </div>
-                    <div class="preformatted" data-parent="24">09:30:44.560 request:
+                    <div class="preformatted" data-parent="24">22:31:12.206 request:
 1 &gt; POST http://localhost:9897/normal/webapi/add
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -431,12 +453,12 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 {"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
 
-09:30:44.607 response time in milliseconds: 35.09
+22:31:12.293 response time in milliseconds: 86.13
 1 &lt; 201
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:12 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -466,21 +488,21 @@
                             <div class="step-ref passed">27</div>
                             <div class="step-cell passed">* def jobID = postResp.actualJobId</div>
                         </div>
-                        <div class="time-cell passed">7</div>
+                        <div class="time-cell passed">8</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="28">
                             <div class="step-ref passed">28</div>
                             <div class="step-cell passed">When path 'normal/webapi/update'</div>
                         </div>
-                        <div class="time-cell passed">4</div>
+                        <div class="time-cell passed">3</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="29">
                             <div class="step-ref passed">29</div>
                             <div class="step-cell passed">* def payload = read("e2eData/e2eDataUpdate.json")</div>
                         </div>
-                        <div class="time-cell passed">9</div>
+                        <div class="time-cell passed">13</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="30">
@@ -494,9 +516,9 @@
                             <div class="step-ref passed">31</div>
                             <div class="step-cell passed">When method put</div>
                         </div>
-                        <div class="time-cell passed">134</div>
+                        <div class="time-cell passed">3514</div>
                     </div>
-                    <div class="preformatted" data-parent="31">09:30:44.623 request:
+                    <div class="preformatted" data-parent="31">22:31:12.327 request:
 1 &gt; PUT http://localhost:9897/normal/webapi/update
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -507,12 +529,12 @@
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 {"jobId":2,"jobTitle":"Software Engg","jobDescription":"To develop andriod application and web application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]},{"projectName":"Web App","technology":["Selenium","UFT","RPA"]}]}
 
-09:30:44.758 response time in milliseconds: 130.88
-1 &lt; 404
+22:31:15.833 response time in milliseconds: 3503.38
+1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:12 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -520,16 +542,14 @@
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-{"message":"Failed to update Entry [jobId=2, jobTitle=Software Engg, jobDescription=To develop andriod application and web application, experience=[Ljava.lang.Object;@2c17544e, project=[[projectName=Movie App, technology=[Kotlin, SQL Lite, Gradle]], [projectName=Web App, technology=[Selenium, UFT, RPA]]]]"}</div>
+{"jobId":2,"jobTitle":"Software Engg","jobDescription":"To develop andriod application and web application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]},{"projectName":"Web App","technology":["Selenium","UFT","RPA"]}]}</div>
                     <div class="step-row">
                         <div class="step-container" id="32">
-                            <div class="step-ref failed">32</div>
-                            <div class="step-cell failed">Then status 200</div>
+                            <div class="step-ref passed">32</div>
+                            <div class="step-cell passed">Then status 200</div>
                         </div>
-                        <div class="time-cell failed">0</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="32">09:30:44.766 status code was: 404, expected: 200, response time: 131, url: http://localhost:9897/normal/webapi/update, response: {"message":"Failed to update Entry [jobId=2, jobTitle=Software Engg, jobDescription=To develop andriod application and web application, experience=[Ljava.lang.Object;@2c17544e, project=[[projectName=Movie App, technology=[Kotlin, SQL Lite, Gradle]], [projectName=Web App, technology=[Selenium, UFT, RPA]]]]"}
-e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: http://localhost:9897/normal/webapi/update, response: {"message":"Failed to update Entry [jobId=2, jobTitle=Software Engg, jobDescription=To develop andriod application and web application, experience=[Ljava.lang.Object;@2c17544e, project=[[projectName=Movie App, technology=[Kotlin, SQL Lite, Gradle]], [projectName=Web App, technology=[Selenium, UFT, RPA]]]]"}</div>
                 </div>
                 <div class="scenario">
                     <div class="scenario-heading" id="[4:32]">
@@ -537,7 +557,7 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [4:32]</span><span class="scenario-name">Test the delete end point to delete the job entry </span>
                         </div>
-                        <div class="scenario-time passed">ms: 191</div>
+                        <div class="scenario-time passed">ms: 3727</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[4:32]bg">
@@ -553,7 +573,7 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="33">09:30:44.522 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="33">22:31:12.202 karate.env system property was:</div>
                     <div class="step-row" data-parent="[4:32]bg">
                         <div class="step-container" id="34">
                             <div class="step-ref bg-step">34</div>
@@ -566,14 +586,14 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                             <div class="step-ref passed">35</div>
                             <div class="step-cell passed">* def postResp = call read("e2e.feature@tag1")</div>
                         </div>
-                        <div class="time-cell passed">109</div>
+                        <div class="time-cell passed">218</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="35.1">
                             <div class="step-ref passed">&gt;&gt;</div>
                             <div class="step-cell passed">com/api/automation/endtoend/e2e.feature</div>
                         </div>
-                        <div class="time-cell passed">82</div>
+                        <div class="time-cell passed">192</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="36">
@@ -581,7 +601,7 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                             <div class="step-indent"> </div>
                             <div class="step-cell passed">Given url 'http://localhost:9897/'</div>
                         </div>
-                        <div class="time-cell passed">7</div>
+                        <div class="time-cell passed">2</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="37">
@@ -597,7 +617,7 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                             <div class="step-indent"> </div>
                             <div class="step-cell passed">Given path 'normal/webapi/add'</div>
                         </div>
-                        <div class="time-cell passed">2</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="39">
@@ -621,9 +641,9 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                             <div class="step-indent"> </div>
                             <div class="step-cell passed">When method post</div>
                         </div>
-                        <div class="time-cell passed">69</div>
+                        <div class="time-cell passed">185</div>
                     </div>
-                    <div class="preformatted" data-parent="41">09:30:44.560 request:
+                    <div class="preformatted" data-parent="41">22:31:12.235 request:
 1 &gt; POST http://localhost:9897/normal/webapi/add
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -634,12 +654,12 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 {"jobId":2,"jobTitle":"Software Engg - Part2","project":[{"technology":["Kotlin","SQL Lite","Gradle","No Sql"],"projectName":"Movie App"}],"jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"]}
 
-09:30:44.638 response time in milliseconds: 65.55
+22:31:12.418 response time in milliseconds: 181.66
 1 &lt; 201
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:12 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -669,23 +689,23 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                             <div class="step-ref passed">44</div>
                             <div class="step-cell passed">* def jobID = postResp.actualJobId</div>
                         </div>
-                        <div class="time-cell passed">2</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="45">
                             <div class="step-ref passed">45</div>
                             <div class="step-cell passed">Given path 'normal/webapi/remove/'+jobID</div>
                         </div>
-                        <div class="time-cell passed">12</div>
+                        <div class="time-cell passed">5</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="46">
                             <div class="step-ref passed">46</div>
                             <div class="step-cell passed">When method delete</div>
                         </div>
-                        <div class="time-cell passed">68</div>
+                        <div class="time-cell passed">3503</div>
                     </div>
-                    <div class="preformatted" data-parent="46">09:30:44.657 request:
+                    <div class="preformatted" data-parent="46">22:31:12.427 request:
 1 &gt; DELETE http://localhost:9897/normal/webapi/remove/2
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -694,12 +714,12 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:44.717 response time in milliseconds: 65.23
+22:31:15.929 response time in milliseconds: 3499.72
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:15 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -707,7 +727,7 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}</div>
+{"jobId":2,"jobTitle":"Software Engg","jobDescription":"To develop andriod application and web application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]},{"projectName":"Web App","technology":["Selenium","UFT","RPA"]}]}</div>
                     <div class="step-row">
                         <div class="step-container" id="47">
                             <div class="step-ref passed">47</div>
@@ -722,7 +742,7 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [5:39]</span><span class="scenario-name">Test the get end point to validate the job entry not present </span>
                         </div>
-                        <div class="scenario-time failed">ms: 107</div>
+                        <div class="scenario-time failed">ms: 147</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[5:39]bg">
@@ -738,29 +758,29 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="48">09:30:44.657 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="48">22:31:12.278 karate.env system property was:</div>
                     <div class="step-row" data-parent="[5:39]bg">
                         <div class="step-container" id="49">
                             <div class="step-ref bg-step">49</div>
                             <div class="step-cell passed">And headers {Accept:'application/json', Content-Type:'application/json'}</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">46</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="50">
                             <div class="step-ref passed">50</div>
                             <div class="step-cell passed">Given path 'normal/webapi/all'</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">19</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="51">
                             <div class="step-ref passed">51</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">101</div>
+                        <div class="time-cell passed">80</div>
                     </div>
-                    <div class="preformatted" data-parent="51">09:30:44.665 request:
+                    <div class="preformatted" data-parent="51">22:31:12.347 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -769,12 +789,12 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:44.758 response time in milliseconds: 97.24
+22:31:12.425 response time in milliseconds: 76.76
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:12 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -782,13 +802,13 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="52">
                             <div class="step-ref passed">52</div>
                             <div class="step-cell passed">Then status 200</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="53">
@@ -797,7 +817,7 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                         </div>
                         <div class="time-cell passed">1</div>
                     </div>
-                    <div class="preformatted" data-parent="53">09:30:44.766 [print] [
+                    <div class="preformatted" data-parent="53">22:31:12.426 [print] [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -839,6 +859,72 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
       "Mobile Iron",
       "Facebook"
     ]
+  },
+  {
+    "jobId": 2,
+    "jobTitle": "Software Engg - Part2",
+    "project": [
+      {
+        "technology": [
+          "Kotlin",
+          "SQL Lite",
+          "Gradle",
+          "No Sql"
+        ],
+        "projectName": "Movie App"
+      }
+    ],
+    "jobDescription": "To develop andriod application",
+    "experience": [
+      "Google",
+      "Apple",
+      "Mobile Iron",
+      "Facebook"
+    ]
+  },
+  {
+    "jobId": 2,
+    "jobTitle": "Software Engg - Part2",
+    "project": [
+      {
+        "technology": [
+          "Kotlin",
+          "SQL Lite",
+          "Gradle",
+          "No Sql"
+        ],
+        "projectName": "Movie App"
+      }
+    ],
+    "jobDescription": "To develop andriod application",
+    "experience": [
+      "Google",
+      "Apple",
+      "Mobile Iron",
+      "Facebook"
+    ]
+  },
+  {
+    "jobId": 2,
+    "jobTitle": "Software Engg - Part2",
+    "project": [
+      {
+        "technology": [
+          "Kotlin",
+          "SQL Lite",
+          "Gradle",
+          "No Sql"
+        ],
+        "projectName": "Movie App"
+      }
+    ],
+    "jobDescription": "To develop andriod application",
+    "experience": [
+      "Google",
+      "Apple",
+      "Mobile Iron",
+      "Facebook"
+    ]
   }
 ]</div>
                     <div class="step-row">
@@ -846,10 +932,10 @@ e2e.feature:30 - status code was: 404, expected: 200, response time: 131, url: h
                             <div class="step-ref failed">54</div>
                             <div class="step-cell failed">And match response.[*].jobTitle !contains 'Software Engg - Part2'</div>
                         </div>
-                        <div class="time-cell failed">4</div>
+                        <div class="time-cell failed">1</div>
                     </div>
-                    <div class="preformatted" data-parent="54">09:30:44.768 assertion failed: path: $.[*].jobTitle[*], actual: ["Software Engg","Software Engg - Part2"], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected
-e2e.feature:44 - path: $.[*].jobTitle[*], actual: ["Software Engg","Software Engg - Part2"], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected</div>
+                    <div class="preformatted" data-parent="54">22:31:12.426 assertion failed: path: $.[*].jobTitle[*], actual: ["Software Engg","Software Engg - Part2","Software Engg - Part2","Software Engg - Part2","Software Engg - Part2"], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected
+e2e.feature:44 - path: $.[*].jobTitle[*], actual: ["Software Engg","Software Engg - Part2","Software Engg - Part2","Software Engg - Part2","Software Engg - Part2"], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected</div>
                 </div>
             </div>
                 

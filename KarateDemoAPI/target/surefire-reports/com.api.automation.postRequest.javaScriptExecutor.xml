@@ -1,5 +1,5 @@
-<testsuite failures="0" name="com/api/automation/postRequest/javaScriptExecutor.feature" skipped="0" tests="1" time="0.046589">
-  <testcase classname="com.api.automation.postRequest.javaScriptExecutor" name="Execute Java Script Function with and without parameter" time="0.046589">
+<testsuite failures="0" name="com/api/automation/postRequest/javaScriptExecutor.feature" skipped="0" tests="1" time="0.089132">
+  <testcase classname="com.api.automation.postRequest.javaScriptExecutor" name="Execute Java Script Function with and without parameter" time="0.089132">
     <system-out>* def getIntVal = function() {return 10;} ................................. passed
 And print "Integer Value is :: ", getIntVal() ............................. passed
 * def getRandomVal = function() {return Math.floor((100) * Math.random());} . passed

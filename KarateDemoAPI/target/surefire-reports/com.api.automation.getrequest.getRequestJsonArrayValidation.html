@@ -46,7 +46,7 @@
                 <div id="nav-type">Scenarios</div>
                          
         
-                <div id="nav-date">2021-08-11 09:30:45 AM</div>
+                <div id="nav-date">2021-08-22 10:31:17 PM</div>
                         
       
                 <div class="nav-container">
@@ -67,7 +67,7 @@
                             <div class="scenario-tags"></div>
                             <span class="scenario-keyword">Scenario: [1:7]</span><span class="scenario-name">To get all the data from the application in JSON format and perform json array validation </span>
                         </div>
-                        <div class="scenario-time passed">ms: 65</div>
+                        <div class="scenario-time passed">ms: 190</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[1:7]bg">
@@ -81,9 +81,9 @@
                             <div class="step-ref bg-step">1</div>
                             <div class="step-cell passed">Given url 'http://localhost:9897'</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">5</div>
                     </div>
-                    <div class="preformatted" data-parent="1">09:30:44.522 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="1">22:31:12.181 karate.env system property was:</div>
                     <div class="step-row" data-parent="[1:7]bg">
                         <div class="step-container" id="2">
                             <div class="step-ref bg-step">2</div>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="2">09:30:44.522 [print] =================Background step should execute first==================</div>
+                    <div class="preformatted" data-parent="2">22:31:12.187 [print] =================Background step should execute first==================</div>
                     <div class="step-row">
                         <div class="step-container" id="3">
                             <div class="step-ref passed">3</div>
@@ -111,9 +111,9 @@
                             <div class="step-ref passed">5</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">30</div>
+                        <div class="time-cell passed">92</div>
                     </div>
-                    <div class="preformatted" data-parent="5">09:30:44.522 request:
+                    <div class="preformatted" data-parent="5">22:31:12.189 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -121,12 +121,12 @@
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:44.544 response time in milliseconds: 27.74
+22:31:12.278 response time in milliseconds: 88.14
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:12 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -134,13 +134,13 @@
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":2,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="6">
                             <div class="step-ref passed">6</div>
                             <div class="step-cell passed">Then status 200</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">1</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="7">
@@ -149,7 +149,7 @@
                         </div>
                         <div class="time-cell passed">1</div>
                     </div>
-                    <div class="preformatted" data-parent="7">09:30:44.560 [print] [
+                    <div class="preformatted" data-parent="7">22:31:12.281 [print] [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -171,7 +171,7 @@
     ]
   },
   {
-    "jobId": 2,
+    "jobId": 800,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -193,7 +193,7 @@
     ]
   },
   {
-    "jobId": 800,
+    "jobId": 2,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -220,14 +220,14 @@
                             <div class="step-ref passed">8</div>
                             <div class="step-cell passed">And match response.[0].jobId == 1</div>
                         </div>
-                        <div class="time-cell passed">4</div>
+                        <div class="time-cell passed">5</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="9">
                             <div class="step-ref passed">9</div>
                             <div class="step-cell passed">And match response.[0].jobTitle == 'Software Engg'</div>
                         </div>
-                        <div class="time-cell passed">3</div>
+                        <div class="time-cell passed">5</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="10">
@@ -241,35 +241,35 @@
                             <div class="step-ref passed">11</div>
                             <div class="step-cell passed">And match response.[0].project[0].technology[1] == 'SQL Lite'</div>
                         </div>
-                        <div class="time-cell passed">3</div>
+                        <div class="time-cell passed">8</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="12">
                             <div class="step-ref passed">12</div>
                             <div class="step-cell passed">And match response.[0].project[0].technology[2] == 'Gradle'</div>
                         </div>
-                        <div class="time-cell passed">3</div>
+                        <div class="time-cell passed">22</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="13">
                             <div class="step-ref passed">13</div>
                             <div class="step-cell passed">And match response.[0].experience[0] == 'Google'</div>
                         </div>
-                        <div class="time-cell passed">3</div>
+                        <div class="time-cell passed">6</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="14">
                             <div class="step-ref passed">14</div>
                             <div class="step-cell passed">And match response.[0].experience[1] == 'Apple'</div>
                         </div>
-                        <div class="time-cell passed">3</div>
+                        <div class="time-cell passed">13</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="15">
                             <div class="step-ref passed">15</div>
                             <div class="step-cell passed">And match response.[0].experience[2] == 'Mobile Iron'</div>
                         </div>
-                        <div class="time-cell passed">3</div>
+                        <div class="time-cell passed">9</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container">
@@ -283,14 +283,14 @@
                             <div class="step-ref passed">16</div>
                             <div class="step-cell passed">And match response.[0].project[0].technology == '#[3]'</div>
                         </div>
-                        <div class="time-cell passed">4</div>
+                        <div class="time-cell passed">15</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="17">
                             <div class="step-ref passed">17</div>
                             <div class="step-cell passed">And match response.[0].experience == '#[3]'</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">2</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container">
@@ -304,14 +304,14 @@
                             <div class="step-ref passed">18</div>
                             <div class="step-cell passed">And match response.[0].project[0].technology[*] contains ['SQL Lite']</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">2</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="19">
                             <div class="step-ref passed">19</div>
                             <div class="step-cell passed">And match response.[0].project[0].technology[*] contains ['SQL Lite','Kotlin']</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">1</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="20">

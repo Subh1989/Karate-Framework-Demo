@@ -1,5 +1,5 @@
-<testsuite failures="4" name="com/api/automation/tags/e2e.feature" skipped="0" tests="5" time="0.254276">
-  <testcase classname="com.api.automation.tags.e2e" name="Test the post end point to create a job entry" time="0.040872">
+<testsuite failures="4" name="com/api/automation/tags/e2e.feature" skipped="0" tests="5" time="0.234507">
+  <testcase classname="com.api.automation.tags.e2e" name="Test the post end point to create a job entry" time="0.013655">
     <failure message="e2e.feature:11 - could not find or read file: e2eData/e2eData.json">Given url 'http://localhost:9897/' ........................................ passed
 And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
 Given path 'normal/webapi/add' ............................................ passed
@@ -14,7 +14,7 @@ When method post .......................................................... skip
 Then status 201 ........................................................... skipped
 * def actualJobId = response.jobId ........................................ skipped</failure>
   </testcase>
-  <testcase classname="com.api.automation.tags.e2e" name="Test the get end point to validate the job entry" time="0.02584">
+  <testcase classname="com.api.automation.tags.e2e" name="Test the get end point to validate the job entry" time="0.093506">
     <system-out>Given url 'http://localhost:9897/' ........................................ passed
 And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
 Given path 'normal/webapi/add' ............................................ passed
@@ -36,7 +36,7 @@ Then status 200 ........................................................... pass
 And print response ........................................................ passed
 And match response.[*].jobTitle contains 'Software Engg - Part2' .......... passed</system-out>
   </testcase>
-  <testcase classname="com.api.automation.tags.e2e" name="Test the put end point to update the job entry" time="0.050659">
+  <testcase classname="com.api.automation.tags.e2e" name="Test the put end point to update the job entry" time="0.034098">
     <failure message="e2e.feature:25 - &#10;e2e.feature:11 - could not find or read file: e2eData/e2eData.json">Given url 'http://localhost:9897/' ........................................ passed
 And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
 Given path 'normal/webapi/add' ............................................ passed
@@ -73,7 +73,7 @@ And request payload ....................................................... skip
 When method put ........................................................... skipped
 Then status 200 ........................................................... skipped</failure>
   </testcase>
-  <testcase classname="com.api.automation.tags.e2e" name="Test the delete end point to delete the job entry" time="0.05896">
+  <testcase classname="com.api.automation.tags.e2e" name="Test the delete end point to delete the job entry" time="0.03441">
     <failure message="e2e.feature:34 - &#10;e2e.feature:11 - could not find or read file: e2eData/e2eData.json">Given url 'http://localhost:9897/' ........................................ passed
 And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
 Given path 'normal/webapi/add' ............................................ passed
@@ -123,7 +123,7 @@ Given path 'normal/webapi/remove/'+jobID .................................. skip
 When method delete ........................................................ skipped
 Then status 200 ........................................................... skipped</failure>
   </testcase>
-  <testcase classname="com.api.automation.tags.e2e" name="Test the get end point to validate the job entry not present" time="0.077944">
+  <testcase classname="com.api.automation.tags.e2e" name="Test the get end point to validate the job entry not present" time="0.058839">
     <failure message="e2e.feature:45 - path: $.[*].jobTitle[*], actual: [&quot;Software Engg&quot;,&quot;Software Engg - Part2&quot;], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected">Given url 'http://localhost:9897/' ........................................ passed
 And headers {Accept:'application/json', Content-Type:'application/json'} .. passed
 Given path 'normal/webapi/add' ............................................ passed

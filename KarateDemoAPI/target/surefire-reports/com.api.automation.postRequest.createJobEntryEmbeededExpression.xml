@@ -1,5 +1,5 @@
-<testsuite failures="0" name="com/api/automation/postRequest/createJobEntryEmbeededExpression.feature" skipped="0" tests="1" time="0.101204">
-  <testcase classname="com.api.automation.postRequest.createJobEntryEmbeededExpression" name="Create a job entry using embedded expression" time="0.101204">
+<testsuite failures="0" name="com/api/automation/postRequest/createJobEntryEmbeededExpression.feature" skipped="0" tests="1" time="0.141618">
+  <testcase classname="com.api.automation.postRequest.createJobEntryEmbeededExpression" name="Create a job entry using embedded expression" time="0.141618">
     <system-out>Given url "http://localhost:9897" ......................................... passed
 And headers {Accept : 'application/json', Content-Type : 'application/json'} . passed
 Given path '/normal/webapi/add' ........................................... passed

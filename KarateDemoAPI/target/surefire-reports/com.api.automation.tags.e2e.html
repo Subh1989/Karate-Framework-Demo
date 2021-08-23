@@ -46,7 +46,7 @@
                 <div id="nav-type">Scenarios</div>
                          
         
-                <div id="nav-date">2021-08-11 09:30:46 AM</div>
+                <div id="nav-date">2021-08-22 10:31:18 PM</div>
                         
       
                 <div class="nav-container">
@@ -81,7 +81,7 @@
                             </div>
                             <span class="scenario-keyword">Scenario: [1:9]</span><span class="scenario-name">Test the post end point to create a job entry </span>
                         </div>
-                        <div class="scenario-time failed">ms: 41</div>
+                        <div class="scenario-time failed">ms: 14</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[1:9]bg">
@@ -95,9 +95,9 @@
                             <div class="step-ref bg-step">1</div>
                             <div class="step-cell passed">Given url 'http://localhost:9897/'</div>
                         </div>
-                        <div class="time-cell passed">9</div>
+                        <div class="time-cell passed">4</div>
                     </div>
-                    <div class="preformatted" data-parent="1">09:30:45.313 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="1">22:31:16.978 karate.env system property was:</div>
                     <div class="step-row" data-parent="[1:9]bg">
                         <div class="step-container" id="2">
                             <div class="step-ref bg-step">2</div>
@@ -110,14 +110,14 @@
                             <div class="step-ref passed">3</div>
                             <div class="step-cell passed">Given path 'normal/webapi/add'</div>
                         </div>
-                        <div class="time-cell passed">5</div>
+                        <div class="time-cell passed">3</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="4">
                             <div class="step-ref failed">4</div>
                             <div class="step-cell failed">* def payload = read("e2eData/e2eData.json")</div>
                         </div>
-                        <div class="time-cell failed">27</div>
+                        <div class="time-cell failed">6</div>
                     </div>
                     <div class="preformatted" data-parent="4">e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                     <div class="step-row">
@@ -157,7 +157,7 @@
                             </div>
                             <span class="scenario-keyword">Scenario: [2:17]</span><span class="scenario-name">Test the get end point to validate the job entry </span>
                         </div>
-                        <div class="scenario-time passed">ms: 26</div>
+                        <div class="scenario-time passed">ms: 94</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[2:17]bg">
@@ -173,7 +173,7 @@
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="9">09:30:45.364 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="9">22:31:16.986 karate.env system property was:</div>
                     <div class="step-row" data-parent="[2:17]bg">
                         <div class="step-container" id="10">
                             <div class="step-ref bg-step">10</div>
@@ -186,16 +186,16 @@
                             <div class="step-ref passed">11</div>
                             <div class="step-cell passed">Given path 'normal/webapi/all'</div>
                         </div>
-                        <div class="time-cell passed">6</div>
+                        <div class="time-cell passed">4</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="12">
                             <div class="step-ref passed">12</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">15</div>
+                        <div class="time-cell passed">84</div>
                     </div>
-                    <div class="preformatted" data-parent="12">09:30:45.374 request:
+                    <div class="preformatted" data-parent="12">22:31:16.992 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -204,12 +204,12 @@
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:45.392 response time in milliseconds: 12.08
+22:31:17.074 response time in milliseconds: 81.54
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:44 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:16 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -217,7 +217,7 @@
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":5,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":800,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":70,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application and web application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]},{"jobId":6,"jobTitle":"Software Engg - Part6","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="13">
                             <div class="step-ref passed">13</div>
@@ -230,9 +230,9 @@
                             <div class="step-ref passed">14</div>
                             <div class="step-cell passed">And print response</div>
                         </div>
-                        <div class="time-cell passed">4</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="14">09:30:45.394 [print] [
+                    <div class="preformatted" data-parent="14">22:31:17.075 [print] [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -254,7 +254,7 @@
     ]
   },
   {
-    "jobId": 5,
+    "jobId": 70,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -267,7 +267,7 @@
         "projectName": "Movie App"
       }
     ],
-    "jobDescription": "To develop andriod application",
+    "jobDescription": "To develop andriod application and web application",
     "experience": [
       "Google",
       "Apple",
@@ -276,8 +276,8 @@
     ]
   },
   {
-    "jobId": 800,
-    "jobTitle": "Software Engg - Part2",
+    "jobId": 6,
+    "jobTitle": "Software Engg - Part6",
     "project": [
       {
         "technology": [
@@ -303,7 +303,7 @@
                             <div class="step-ref passed">15</div>
                             <div class="step-cell passed">And match response.[*].jobTitle contains 'Software Engg - Part2'</div>
                         </div>
-                        <div class="time-cell passed">0</div>
+                        <div class="time-cell passed">5</div>
                     </div>
                 </div>
                 <div class="scenario">
@@ -314,7 +314,7 @@
                             </div>
                             <span class="scenario-keyword">Scenario: [3:24]</span><span class="scenario-name">Test the put end point to update the job entry </span>
                         </div>
-                        <div class="scenario-time failed">ms: 51</div>
+                        <div class="scenario-time failed">ms: 34</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[3:24]bg">
@@ -328,9 +328,9 @@
                             <div class="step-ref bg-step">16</div>
                             <div class="step-cell passed">Given url 'http://localhost:9897/'</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="16">09:30:45.413 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="16">22:31:17.008 karate.env system property was:</div>
                     <div class="step-row" data-parent="[3:24]bg">
                         <div class="step-container" id="17">
                             <div class="step-ref bg-step">17</div>
@@ -343,9 +343,9 @@
                             <div class="step-ref failed">18</div>
                             <div class="step-cell failed">* def postResp = call read("e2e.feature@tag1")</div>
                         </div>
-                        <div class="time-cell failed">50</div>
+                        <div class="time-cell failed">34</div>
                     </div>
-                    <div class="preformatted" data-parent="18">09:30:45.463 feature call failed: classpath:com/api/automation/tags/e2e.feature
+                    <div class="preformatted" data-parent="18">22:31:17.042 feature call failed: classpath:com/api/automation/tags/e2e.feature
 arg: null
 e2e.feature:11 - could not find or read file: e2eData/e2eData.json
 e2e.feature:25 - 
@@ -355,7 +355,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             <div class="step-ref failed">&gt;&gt;</div>
                             <div class="step-cell failed">com/api/automation/tags/e2e.feature</div>
                         </div>
-                        <div class="time-cell failed">7</div>
+                        <div class="time-cell failed">4</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="19">
@@ -363,7 +363,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             <div class="step-indent"> </div>
                             <div class="step-cell passed">Given url 'http://localhost:9897/'</div>
                         </div>
-                        <div class="time-cell passed">2</div>
+                        <div class="time-cell passed">1</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="20">
@@ -387,7 +387,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             <div class="step-indent"> </div>
                             <div class="step-cell failed">* def payload = read("e2eData/e2eData.json")</div>
                         </div>
-                        <div class="time-cell failed">5</div>
+                        <div class="time-cell failed">2</div>
                     </div>
                     <div class="preformatted" data-parent="22">e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                     <div class="step-row">
@@ -473,7 +473,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             </div>
                             <span class="scenario-keyword">Scenario: [4:33]</span><span class="scenario-name">Test the delete end point to delete the job entry </span>
                         </div>
-                        <div class="scenario-time failed">ms: 59</div>
+                        <div class="scenario-time failed">ms: 34</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[4:33]bg">
@@ -489,7 +489,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="33">09:30:45.465 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="33">22:31:17.002 karate.env system property was:</div>
                     <div class="step-row" data-parent="[4:33]bg">
                         <div class="step-container" id="34">
                             <div class="step-ref bg-step">34</div>
@@ -502,9 +502,9 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             <div class="step-ref failed">35</div>
                             <div class="step-cell failed">* def postResp = call read("e2e.feature@tag1")</div>
                         </div>
-                        <div class="time-cell failed">59</div>
+                        <div class="time-cell failed">34</div>
                     </div>
-                    <div class="preformatted" data-parent="35">09:30:45.526 feature call failed: classpath:com/api/automation/tags/e2e.feature
+                    <div class="preformatted" data-parent="35">22:31:17.036 feature call failed: classpath:com/api/automation/tags/e2e.feature
 arg: null
 e2e.feature:11 - could not find or read file: e2eData/e2eData.json
 e2e.feature:34 - 
@@ -514,7 +514,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             <div class="step-ref failed">&gt;&gt;</div>
                             <div class="step-cell failed">com/api/automation/tags/e2e.feature</div>
                         </div>
-                        <div class="time-cell failed">8</div>
+                        <div class="time-cell failed">9</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="36">
@@ -546,7 +546,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             <div class="step-indent"> </div>
                             <div class="step-cell failed">* def payload = read("e2eData/e2eData.json")</div>
                         </div>
-                        <div class="time-cell failed">6</div>
+                        <div class="time-cell failed">7</div>
                     </div>
                     <div class="preformatted" data-parent="39">e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                     <div class="step-row">
@@ -618,7 +618,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             </div>
                             <span class="scenario-keyword">Scenario: [5:40]</span><span class="scenario-name">Test the get end point to validate the job entry not present </span>
                         </div>
-                        <div class="scenario-time failed">ms: 78</div>
+                        <div class="scenario-time failed">ms: 59</div>
                     </div>
                     <div class="step-row">
                         <div class="step-container" id="[5:40]bg">
@@ -634,7 +634,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                         </div>
                         <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="48">09:30:45.544 karate.env system property was:</div>
+                    <div class="preformatted" data-parent="48">22:31:17.041 karate.env system property was:</div>
                     <div class="step-row" data-parent="[5:40]bg">
                         <div class="step-container" id="49">
                             <div class="step-ref bg-step">49</div>
@@ -654,9 +654,9 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             <div class="step-ref passed">51</div>
                             <div class="step-cell passed">When method get</div>
                         </div>
-                        <div class="time-cell passed">76</div>
+                        <div class="time-cell passed">57</div>
                     </div>
-                    <div class="preformatted" data-parent="51">09:30:45.546 request:
+                    <div class="preformatted" data-parent="51">22:31:17.043 request:
 1 &gt; GET http://localhost:9897/normal/webapi/all
 1 &gt; Accept: application/json
 1 &gt; Accept-Encoding: gzip,deflate
@@ -665,12 +665,12 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
 1 &gt; Host: localhost:9897
 1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/11.0.12)
 
-09:30:45.617 response time in milliseconds: 72.45
+22:31:17.098 response time in milliseconds: 45.42
 1 &lt; 200
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Connection: keep-alive
 1 &lt; Content-Type: application/json
-1 &lt; Date: Wed, 11 Aug 2021 04:00:45 GMT
+1 &lt; Date: Sun, 22 Aug 2021 17:01:16 GMT
 1 &lt; Expires: 0
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Pragma: no-cache
@@ -678,7 +678,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-Frame-Options: DENY
 1 &lt; X-XSS-Protection: 1; mode=block
-[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":26,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application and web application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]},{"projectName":"Web App","technology":["Selenium","UFT","RPA"]}]}]</div>
+[{"jobId":1,"jobTitle":"Software Engg","jobDescription":"To develop andriod application","experience":["Google","Apple","Mobile Iron"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle"]}]},{"jobId":70,"jobTitle":"Software Engg - Part2","jobDescription":"To develop andriod application and web application","experience":["Google","Apple","Mobile Iron","Facebook"],"project":[{"projectName":"Movie App","technology":["Kotlin","SQL Lite","Gradle","No Sql"]}]}]</div>
                     <div class="step-row">
                         <div class="step-container" id="52">
                             <div class="step-ref passed">52</div>
@@ -691,9 +691,9 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                             <div class="step-ref passed">53</div>
                             <div class="step-cell passed">And print response</div>
                         </div>
-                        <div class="time-cell passed">1</div>
+                        <div class="time-cell passed">0</div>
                     </div>
-                    <div class="preformatted" data-parent="53">09:30:45.617 [print] [
+                    <div class="preformatted" data-parent="53">22:31:17.099 [print] [
   {
     "jobId": 1,
     "jobTitle": "Software Engg",
@@ -715,7 +715,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
     ]
   },
   {
-    "jobId": 26,
+    "jobId": 70,
     "jobTitle": "Software Engg - Part2",
     "project": [
       {
@@ -726,14 +726,6 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
           "No Sql"
         ],
         "projectName": "Movie App"
-      },
-      {
-        "technology": [
-          "Selenium",
-          "UFT",
-          "RPA"
-        ],
-        "projectName": "Web App"
       }
     ],
     "jobDescription": "To develop andriod application and web application",
@@ -752,7 +744,7 @@ e2e.feature:11 - could not find or read file: e2eData/e2eData.json</div>
                         </div>
                         <div class="time-cell failed">1</div>
                     </div>
-                    <div class="preformatted" data-parent="54">09:30:45.617 assertion failed: path: $.[*].jobTitle[*], actual: ["Software Engg","Software Engg - Part2"], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected
+                    <div class="preformatted" data-parent="54">22:31:17.100 assertion failed: path: $.[*].jobTitle[*], actual: ["Software Engg","Software Engg - Part2"], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected
 e2e.feature:45 - path: $.[*].jobTitle[*], actual: ["Software Engg","Software Engg - Part2"], NOT expected: 'Software Engg - Part2', reason: actual value contains unexpected</div>
                 </div>
             </div>
